@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sp" lang="sp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    
+    <!--Estilo fuente: Roboto-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Proyecto</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-primary rounded-0">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white font-weight-bold" href="#identidad">Identidad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white font-weight-bold" href="#contacto">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white font-weight-bold" href="#procedencia">Procedencia</a>
+          </li>
+        </ul>
+      </nav>
+
+    <div class="jumbotron rounded-0 img-jmbo">
+        <div class="container-fluid">
+            <h1 class="text-center">Registro de Datos Generales</h1>
+            <h4 class="text-center">Bienvenidos alumnos de nuevo ingreso</h4>
+        </div>
+    </div>
+
+    <div class="contact-box">
+    <div class="container p-6 bg-dark">
+        <div class="user-img">
+            <img src="img/escudoESCOM.png" class="img-fluid img-thumbnail rounded-circle mx-auto d-block" alt="ESCOM">
+        </div>
+        <form action= "agradecimiento.html" method="get" enctype="multipart/form-data" autocomplete="off">
+            <fieldset>
+                <legend class="font-weight-bold" id="identidad">Identidad</legend>
+                <div class="row mt-3">
+                    <div class="form-group col-md-4">
+                        <label for="boleta">No. de boleta<span class="text-danger">*</span></label>
+                        <input type="number" id="boleta" name="boleta" size="10" maxlength="10" class="form-control" placeholder="Boleta"> 
+                    </div>
+                    <div class="form-group col-md-8">
+                        <label for="nombre">Nombre<span class="text-danger">*</span></label>
+                        <input type="text" id="nombre" name="nombre" size="10" maxlength="20" placeholder="Ingrese el nombre" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="form-group col-md-6">
+                        <label for="apellidop">Apellido Paterno<span class="text-danger">*</span></label>
+                        <input type="text" id="apellidop" name="apellidop" size="10" maxlength="15" class="form-control" placeholder="Ingrese Apellido Paterno">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="apellidom">Apellido Materno<span class="text-danger">*</span></label>
+                        <input type="text" id="apellidom" name="apellidom" size="10" maxlength="15" placeholder="Ingrese Apellido Materno" class="form-control">
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="form-group col-xl-3 col-md-6">
+                        <label for="sexo" class="mb-3">G&eacute;nero<span class="text-danger">*</span></label>
+                        <div class="form-check">
+                            <label class="form-check-label" for="radio1">
+                                <input type="radio" class="form-check-input" name="sexo" id="radio1" value="masculino">Masculino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label mb-3" for="radio2">
+                                <input type="radio" class="form-check-input" name="sexo" id="radio2" value="femenino">Femenino
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-xl-3 col-md-6">
+                        <label for="fecha">Fecha de nacimiento<span class="text-danger">*</span></label>
+                        <input type="date" id="fecha" name="fecha" size="5" class="form-control">
+                    </div>
+                    <div class="form-group col-xl-6">
+                        <label for="curp">CURP<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" style="text-transform: uppercase;" id="curp" name="curp" size="18" maxlength="18">
+                    </div>
+            </div>
+            </fieldset>
+
+            <fieldset class="mt-5">
+                <legend class="font-weight-bold" id="contacto">Contacto</legend>
+                <div class="form-group mt-3">
+                    <label for="calleynum">Calle y N&uacute;mero<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="calleynum" name="calleynum" size="10" maxlength="25">
+                </div>
+                <div class="row mt-2">
+                    <div class="form-group col-md-8">
+                        <label for="col">Colonia<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="col" name="col" size="10" maxlength="20">
+                    </div>
+                    
+                    <div class="form-group col-md-4">
+                        <label for="postal">C&oacute;digo Postal<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="postal" name="postal" size="10" maxlength="8">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-5">
+                        <label for="tel">Tel&eacute;fono o celular<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="tel" name="tel" size="10" maxlength="12">
+                    </div>
+                    <div class="form-group col-md-7">
+                        <label for="correo">Correo Electr&oacute;nico<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="correo" name="correo" size="10" maxlength="50">
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <fieldset class="mt-5">
+                <legend class="font-weight-bold" id="procedencia">Procedencia</legend>
+                <div class="row mt-3">
+                    <div class="form-group col-lg-6">
+                        <label for = "escuela">Escuela de procedencia<span class="text-danger">*</span></label>
+                        <select class="form-control" id = "escuela" name = "escuela">
+                            <option value = "escSel" selected = "selected"> Selecciona tu escuela de procedencia</option>
+                            <option value = "cecyt1">CECyT 1 “Gonzalez Vazquez Vega"</option>
+                            <option value = "cecyt2">CECyT 2 "Miguel Bernard"</option>
+                            <option value = "cecyt3">CECyT 3 "Estanislao Ramirez Ruiz"</option>
+                            <option value = "cecyt4">CECyT 4 "Lazaro Cardenas"</option>
+                            <option value = "cecyt5">CECyT 5 "Benito Juarez Garcia"</option>
+                            <option value = "cecyt6">CECyT 6 "Miguel Othon de Mendizabal"</option>
+                            <option value = "cecyt7">CECyT 7 "Cuauhtemoc"</option>
+                            <option value = "cecyt8">CECyT 8 "Narciso Bassols Garcia"</option>
+                            <option value = "cecyt9">CECyT 9 "Juan de Dios Batiz"</option>
+                            <option value = "cecyt10">CECyT 10 "Carlos Vallejo Marquez"</option>
+                            <option value = "cecyt11">CECyT 11 "Wilfrido Massieu Perez"</option>
+                            <option value = "cecyt12">CECyT 12 "Jose Maria Morelos y Pavon"</option>
+                            <option value = "cecyt13">CECyT 13 "Ricardo Flores Magon"</option>
+                            <option value = "cecyt14">CECyT 14 "Luis Enrique Erro"</option>
+                            <option value = "cecyt15">CECyT 15 "Diodoro Antunez Echegaray"</option>
+                            <option value = "cecyt16">CECyT 16 “Hidalgo”</option>
+                            <option value = "cecyt17">CECyT 17 "Leon, Guanajuato"</option>
+                            <option value = "cecyt18">CECyT 18 "Zacatecas"</option>
+                            <option value = "cecyt19">CECyT 19 “Leona Vicario”</option>
+                            <option value = "cet1">CET 1 “Walter Cross Buchanan”</option>
+                            <option value = "otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for = "estado">Entidad federativa de procedencia<span class="text-danger">*</span></label>
+                        <select class="form-control" id = "estado" name = "estado">
+                            <option value = "estSel" selected = "selected"> Selecciona tu estado de procedencia</option>
+                            <option value = "est1">Aguascalientes</option>
+                            <option value = "est2">Baja California</option>
+                            <option value = "est3">Baja California Sur</option>
+                            <option value = "est4">Campeche</option>
+                            <option value = "est5">Chiapas</option>
+                            <option value = "est6">Chihuahua</option>
+                            <option value = "est7">Ciudad de Mexico</option>
+                            <option value = "est8">Coahuila</option>
+                            <option value = "est9">Colima</option>
+                            <option value = "est10">Durango</option>
+                            <option value = "est11">Estado de Mexico</option>
+                            <option value = "est12">Guanajuato</option>
+                            <option value = "est13">Guerrero</option>
+                            <option value = "est14">Hidalgo</option>
+                            <option value = "est15">Jalisco</option>
+                            <option value = "est16">Michoacan</option>
+                            <option value = "est17">Morelos</option>
+                            <option value = "est18">Nayarit</option>
+                            <option value = "est19">Nuevo Leon</option>
+                            <option value = "est20">Oaxaca</option>
+                            <option value = "est21">Puebla</option>
+                            <option value = "est22">Queretaro</option>
+                            <option value = "est23">Quintana Roo</option>
+                            <option value = "est24">San Luis Potosi</option>
+                            <option value = "est25">Sinaloa</option>
+                            <option value = "est26">Sonora</option>
+                            <option value = "est27">Tabasco</option>
+                            <option value = "est28">Tamaulipas</option>
+                            <option value = "est29">Tlaxcala</option>
+                            <option value = "est30">Veracruz</option>
+                            <option value = "est31">Yucatan</option>
+                            <option value = "est32">Zacatecas</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for = "escNombreTxt">Nombre de la escuela<span class="text-danger">*</span></label>
+                    <input type = “text” class="form-control" id = “escNombreTxt” name = “nombreTxt” size = “30” maxlength = “30”/>
+                </div>
+                <div class="row mt-2">
+                    <div class="form-group col-md-5">
+                        <label for = "escPromedio">Promedio<span class="text-danger">*</span></label>
+                        <input type = "number" class="form-control" id = "escPromedio" name = "promedio" min = "0" max = "10">
+                    </div>
+                            
+                    <div class="form-group col-md-7">
+                        <label for = "opcionEscom">ESCOM fue tu<span class="text-danger">*</span></label>
+                        <select class="form-control" id = "opcionEscom" name = "opcionEscom">
+                            <option value = "estSel" selected = "selected"> Selecciona la opcion</option>
+                            <option value = "opc1">Primera opcion</option>
+                            <option value = "opc2">Segunda opcion</option>
+                            <option value = "opc3">Tercera opcion</option>
+                            <option value = "opc4">Cuarta opcion</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <input type="reset" class="btn btn-outline-light mt-4" value="Limpiar"/>
+            <input type="submit" class="btn btn-primary btn-lg btn-block mt-4" value="Enviar"/>
+        </form>
+        <small class="d-inline-block text-muted mt-2">Instituto Politécnico Nacional | Escuela Superior de Cómputo | 2021</small>
+    </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
