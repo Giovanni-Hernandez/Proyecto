@@ -1,0 +1,129 @@
+:root{
+    --color-dark: #15181f;
+    --color-dark-x: #2d343f;
+    --color-dark-xx: #1f232b;
+    --color-light: #ffffff;
+    --color-guinda: rgb(141, 0, 71);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--color-light);
+    letter-spacing: .05rem;
+    background-color: var(--color-guinda) ;
+    /*background-image: linear-gradient(to top, rgb(141, 0, 71) 75%, white 100% ); */
+    /*Color de fondo con degradado */
+}
+h1{
+    font-size:3.5em;
+    font-weight: 700;
+}
+.bg-dark{
+    background-color: var(--color-dark)!important;
+    border-radius: .25rem;
+}
+.p-6{
+    padding: 5rem;
+}
+.contact-box{
+    padding: 3rem;
+}
+.form-control{
+    background-color: var(--color-dark-xx);
+    border: 2px solid var(--color-dark-xx);
+    border-radius: .2rem;
+    padding: 1.5rem 1rem;
+}
+select{
+    text-indent: 5px;
+    padding: 1.5rem !important;
+    height: 5rem !important;
+}
+.img-jmbo{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('/img/escom.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 50vh;
+}
+.user-img{
+    margin-top: -135px;
+    margin-bottom: 35px;
+} 
+.user-img img{
+    width: 150px;
+    height: 125px;
+}
+.zoom{
+    transition: transform 0.2s;
+}
+.zoom:hover{
+    transform: scale(1.15);
+}
+.hidden {
+    opacity:0;
+}
+.console-container {
+    font-weight: 700;
+    font-size:3.5em;
+    text-align:center;
+    display:block;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+}
+.console-underscore {
+    display:inline-block;
+    position:relative;
+    left:10px;
+}
+@media (max-width: 575.98px) {
+    .p-6{
+        padding: 2rem;
+    }
+    .contact-box{
+        padding: 0;
+    }
+    .width-100{
+        width: 100%;
+    }
+    .user-img{
+        margin-top: -55px;
+        margin-bottom: 30px;
+    }
+    .user-img img{
+        width: 80px;
+        height: 70px;
+    }
+    .console-container, h1{
+        font-size: 1.6em;
+    }
+    .img-jmbo{
+        min-height: 20vh;
+    }
+
+}
+@media (max-width: 767.5px){
+    .centrar-img{
+        display:block;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+    .escom-img img{
+        width: 100px;
+        height: 85px;
+    }
+    .ipn-img img{
+        width: 80px;
+        height: 100px;
+    }
+    .resize1{
+        font-size: 1.3em;
+    }
+    .resize2{
+        font-size: 1.1em;
+    }
+}
