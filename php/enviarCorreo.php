@@ -30,7 +30,7 @@
 	$mail->addAttachment("../pdf/pruebas.pdf", "ComprobanteDeRregistro.pdf");
 
 	/* Remitente */
-	$mail->addAddress("escom.proyecto.tw@gmail.com");
+	$mail->addAddress("frunu04@gmail.com");
 
 	if ( $mail->send() ) {
 		echo "Correo enviando";
