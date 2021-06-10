@@ -20,10 +20,10 @@
 	$mail->setFrom("escom.proyecto.tw@gmail.com");
 
 	$mail->isHTML(true);
-	$shtml = file_get_contents('html/mensaje.html');
+	$shtml = file_get_contents('../mensaje.html');
     $mail -> Body = $shtml;
 
-	$mail->addAttachment("pruebas.pdf", "ComprobanteDeRregistro.pdf");
+	$mail->addAttachment("../pdf/pruebas.pdf", "ComprobanteDeRregistro.pdf");
 
 	$mail->addAddress("escom.proyecto.tw@gmail.com");
 
@@ -34,7 +34,4 @@
 	}
 
 	$mail->smtpClose();
-    
-	/*$shtml = file_get_contents('html/mensaje.html');
-	echo $shtml;*/
 ?>
