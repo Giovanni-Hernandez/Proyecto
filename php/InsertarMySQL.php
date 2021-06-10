@@ -45,7 +45,7 @@
          $opcionEsc = strtoupper($opcionEsc1);
 
          //Comando de MySQL
-         $sql = "INSERT INTO registroalumnos (NoBoleta, Nombre, ApellidoPaterno, ApellidoMaterno, FechaNacimiento, Genero, CURP, CalleYNumero, Colonia, CodigoPostal, TelefonoOCelular, Correo, EscuelaProcedencia, EntidadFederativa, NombreEscuela, Promedio, OpcionEscom) VALUES ('{$boleta}', '{$nombre}', '{$apPat}', '{$apMat}', '{$fecha}', '{$genero}', '{$CURP}', '{$calleynum}', '{$colonia}', '{$codigo}', {$telefono}, '{$correo}', '{$escuela}', '{$estado}', '{$nomescuela}', '{$escProme}', '{$opcionEsc}')";
+         $sql = "CALL inscribir ('{$boleta}', '{$nombre}', '{$apPat}', '{$apMat}', '{$fecha}', '{$genero}', '{$CURP}', '{$calleynum}', '{$colonia}', '{$codigo}', {$telefono}, '{$correo}', '{$escuela}', '{$estado}', '{$nomescuela}', '{$escProme}', '{$opcionEsc}')";
 
          //Metiedno el valor a la base de datos
 
