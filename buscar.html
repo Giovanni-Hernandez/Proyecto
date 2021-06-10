@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Alumno</title>
+</head>
+<script src="/../Proyecto WEB/js/validarCampo.js"></script>
+
+<body>
+    <a href="/../Proyecto WEB/php/Administrador.php">Regresar</a>
+    <a href="/../Proyecto WEB/php/CerrarSesion.php">Cerrar Sesion</a>
+    <form action="/../Proyecto WEB/php/InfoAlumno.php" method="post" onsubmit="return valCampo()">
+        <h1>Buscar Alumno</h1>
+        <h3>Por favor introduzca el número de boleta del estudiante</h3>
+        <input type="text" maxlength="10" id="txtnumero" name="txtnumero">
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+
+</html>
