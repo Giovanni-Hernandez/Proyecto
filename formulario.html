@@ -8,11 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/../Proyecto WEB/css/bootstrap.min.css">
 
     <!--Hoja de estilos-->
-    <link rel="preload" href="css/style.css" as="style" />
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="preload" href="/../Proyecto WEB/css/style.css" as="style" />
+    <link href="/../Proyecto WEB/css/style.css" rel="stylesheet">
+
+    <!--Font Awesome Iconos-->
+    <link href="/../Proyecto WEB/css/all.css" rel="stylesheet">
+    <script defer src="/Proyecto WEB/js/all.js"></script>
 
     <!--Estilo fuente: Roboto-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -58,16 +62,22 @@
             <span id='text1'></span>
             <div class='console-underscore' id='console'>&#95;</div>
         </div>
-        <div class="col text-center mt-4">
-            <a href="recuperar.html" class="btn btn-danger" role="button" target="_blank">Recuperar PDF</a>
-
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 text-right mt-4">
+                <a href="/../Proyecto WEB/index.html" class="btn btn-success" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
+            </div>
+            <div class="col-md-6 text-left mt-4">
+                <a href="/../Proyecto WEB/recuperar.html" class="btn btn-danger" role="button">Recuperar PDF <i class="fas fa-file-pdf"></i> </a>
+            </div>
+        </div>
         </div>
     </div>
 
     <!--Barra de navegacion-->
     <nav class="navbar navbar-expand-md sticky-top rounded-0 navbar-dark bg-primary">
         <a class="navbar-brand font-weight-bold zoom" href="#">
-            <img src="img/escudoESCOM.png" alt="IPN" style="width:40px;">
+            <img src="/../Proyecto WEB/img/escudoESCOM.png" alt="IPN" style="width:40px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -91,7 +101,7 @@
     <div class="container p-4 bg-dark mb-5 mt-5 roundend-0">
         <div class="row">
             <div class="col-md-3 escom-img">
-                <img src="img/escudoESCOM.png" width="180" height="150" class="img-responsive mx-auto d-block zoom centrar-img" alt="ESCOM ">
+                <img src="/../Proyecto WEB/img/escudoESCOM.png" width="180" height="150" class="img-responsive mx-auto d-block zoom centrar-img" alt="ESCOM ">
             </div>
             <div class="col-md-6 ">
                 </br>
@@ -99,7 +109,7 @@
                 <h3 class="text-center resize2 ">Escuela Superior de Cómputo</h3>
             </div>
             <div class="col-md-3 ipn-img ">
-                <img src="img/ipn.png " width="150 " height="180 " class="img-responsive mx-auto d-block zoom centrar-img " alt="IPN ">
+                <img src="/../Proyecto WEB/img/ipn.png" width="150 " height="180 " class="img-responsive mx-auto d-block zoom centrar-img " alt="IPN ">
             </div>
         </div>
     </div>
@@ -107,14 +117,14 @@
     <!--Caja de contacto-->
     <div class="contact-box ">
         <div class="container p-6 bg-dark ">
-            <div class="user-img ">
-                <img src="img/user.png " class="img-fluid img-thumbnail rounded-circle mx-auto d-block zoom " alt="ESCOM ">
+            <div class="user-img">
+                <img src="/../Proyecto WEB/img/estudiante.png" class="img-fluid img-thumbnail rounded-circle mx-auto d-block zoom " alt="ESCOM ">
             </div>
             <!--Formulario-->
             <form action="/../Proyecto WEB/php/InsertarMySQL.php" method="POST" enctype="multipart/form-data" class="needs-validation " autocomplete="off " novalidate onsubmit="return validacion()">
 
                 <fieldset>
-                    <legend class="font-weight-bold " id="identidad ">Identidad</legend>
+                    <legend class="font-weight-bold " id="identidad">Identidad</legend>
                     <div class="row mt-3 ">
                         <div class="form-group col-md-4 ">
                             <label for="boleta ">No. de boleta<span class="text-danger ">*</span></label>
@@ -173,7 +183,7 @@
                     </div>
 
                     <fieldset class="mt-5 ">
-                        <legend class="font-weight-bold " id="contacto ">Contacto</legend>
+                        <legend class="font-weight-bold " id="contacto">Contacto</legend>
                         <div class="form-group mt-3 ">
                             <label for="calleynum ">Calle y N&uacute;mero<span class="text-danger ">*</span></label>
                             <input type="text" class="form-control " id="calleynum" name="calleynum" size="10 " maxlength="25" required onkeypress="return letrasNumeros(event)" autocomplete="off">
@@ -195,37 +205,41 @@
                                 <div class="invalid-feedback ">Por favor, registre su código postal</div>
                             </div>
                         </div>
-                        <div class="row ">
-                            <div class="form-group col-md-5 ">
+                        <div class="row mt-2">
+                            <div class="form-group col-lg-4 ">
                                 <label for="tel ">Tel&eacute;fono o celular<span class="text-danger ">*</span></label>
                                 <input type="text" class="form-control " id="tel" name="tel" size="10 " maxlength="12 " required onkeypress="return soloNumeros(event)" autocomplete="off">
                                 <div class="valid-feedback ">¡Válido!</div>
                                 <div class="invalid-feedback ">Proporcione un teléfono válido</div>
                             </div>
-                            <div class="form-group col-md-5 ">
-                                <label for="correo ">Correo Electr&oacute;nico<span class="text-danger ">*</span></label>
-                                <input type="text " class="form-control " id="correo" name="correo" size="5" maxlength="20 " required autocomplete="off">
-                                <select id="dircor" name="dircor" class="form-control ">
-                                    <option value="@gmail.com">@gmail.com</option>
-                                    <option value="@hotmail.com">@hotmail.com</option>
-                                    <option value="@outlook.com">@outlook.com</option>
-                                    <option value="@outlook.com.es">@outlook.com.es</option>
-                                    <option value="@adinet.com.uy">@adinet.com.uy</option>
-                                    <option value="@vera.com.uy">@vera.com.uy</option>
-                                </select>
-                                <div class="valid-feedback ">¡Válido!</div>
-                                <div class="invalid-feedback ">Proporcione un correo electrónico válido</div>
-                            </div>
+                            <div class="form-group col-lg-8 ">
+                                <label for="correo">Correo Electr&oacute;nico<span class="text-danger ">*</span></label>
+                                <div class="input-group ">
+                                    <input type="text " class="form-control " id="correo" name="correo" size="5" maxlength="20 " aria-describedby= "dircor" required autocomplete="off">
+                                    <div class="input-group-append">  
+                                        <select id="dircor"  name="dircor" class="form-control input-group-text">
+                                            <option value="@gmail.com">@gmail.com</option>
+                                            <option value="@hotmail.com">@hotmail.com</option>
+                                            <option value="@outlook.com">@outlook.com</option>
+                                            <option value="@outlook.com.es">@outlook.com.es</option>
+                                            <option value="@adinet.com.uy">@adinet.com.uy</option>
+                                            <option value="@vera.com.uy">@vera.com.uy</option>
+                                        </select>
+                                    </div>
+                                    <div class="valid-feedback ">¡Válido!</div>
+                                    <div class="invalid-feedback ">Proporcione un correo electrónico válido</div>
+                                </div> <!--Finaliza el input-group-->
+                            </div><!--Finaliza el form-group col-lg-8-->
                         </div>
                     </fieldset>
 
                     <fieldset class="mt-5 ">
-                        <legend class="font-weight-bold " id="procedencia ">Procedencia</legend>
+                        <legend class="font-weight-bold " id="procedencia">Procedencia</legend>
                         <div class="row mt-3 ">
                             <div class="form-group col-lg-6 ">
                                 <label for="escuela ">Escuela de procedencia<span class="text-danger ">*</span></label>
                                 <select class="form-control " id="escuela" name="escuela" required onchange="mostrarCampo()">
-                                    <option value = "escSel" selected = "selected"> Selecciona tu escuela de procedencia</option>
+                                    <option value = "" selected = "selected"> Selecciona tu escuela de procedencia</option>
                                     <option value = "CECyT 1 “Gonzalez Vazquez Vega“">CECyT 1 “Gonzalez Vazquez Vega"</option>
                                     <option value = "CECyT 2 “Miguel Bernard“">CECyT 2 "Miguel Bernard"</option>
                                     <option value = "CECyT 3 “Estanislao Ramirez Ruiz“">CECyT 3 "Estanislao Ramirez Ruiz"</option>
@@ -254,7 +268,7 @@
                             <div class="form-group col-lg-6">
                                 <label for="estado">Entidad federativa de procedencia<span class="text-danger">*</span></label>
                                 <select class="form-control" id="estado" name="estado" required> 
-                                    <option value = "estSel" selected = "selected"> Selecciona tu estado de procedencia</option>
+                                    <option value = "" selected = "selected"> Selecciona tu estado de procedencia</option>
                                     <option value = "Aguascalientes">Aguascalientes</option>
                                     <option value = "Baja California">Baja California</option>
                                     <option value = "Baja California Sur">Baja California Sur</option>
@@ -307,7 +321,7 @@
                             <div class="form-group col-md-7">
                                 <label for="opcionEscom">ESCOM fue tu<span class="text-danger">*</span></label>
                                 <select class="form-control" id="opcionEscom" name="opcionEscom" required>
-                                    <option value = "estSel" selected = "selected"> Selecciona la opción</option>
+                                    <option value = "" selected = "selected"> Selecciona la opción</option>
                                     <option value = "Primera opción">Primera opción</option>
                                     <option value = "Segunda opción">Segunda opción</option>
                                     <option value = "Tercera opción">Tercera opción</option>
@@ -324,17 +338,23 @@
             <small class="d-inline-block text-muted mt-2">Instituto Politécnico Nacional | Escuela Superior de Cómputo | 2021</small>
         </div>
     </div>
+
+    <!--Footer-->
+    <div class="container-fluid bg-dark text-center p-3">
+        <p class="small">&copy;Todos los derechos reservados a la Escuela Superior de Cómputo</p>
+    </div>
+
     <!--Validacion de formulario por JScript-->
-    <script language="javascript" type="text/javascript" src="js/script1.js"></script>
+    <script language="javascript" type="text/javascript" src="/../Proyecto WEB/js/script1.js"></script>
     <!--Texto por consola-->
-    <script language="javascript" type="text/javascript" src="js/script2.js"></script>
+    <script language="javascript" type="text/javascript" src="/../Proyecto WEB/js/script2.js"></script>
     <noscript>El navegador no soporta Javascript</noscript>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/../Proyecto WEB/js/bootstrap.min.js"></script>
 </body>
 
 </html>

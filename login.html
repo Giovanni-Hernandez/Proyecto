@@ -5,26 +5,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/../Proyecto WEB/css/bootstrap.min.css">
+
+    <!--Hoja de estilos-->
+    <link rel="preload" href="/../Proyecto WEB/css/style.css" as="style" />
+    <link href="/../Proyecto WEB/css/style.css" rel="stylesheet">
+
+    <!--Font Awesome Iconos-->
+    <link href="/../Proyecto WEB/css/all.css" rel="stylesheet">
+    <script defer src="/Proyecto WEB/js/all.js"></script>
+
+    <!--Estilo fuente: Roboto-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
     <title>Login</title>
 </head>
 
 <body>
-    <h1>Bienvenido Inicia Sesion</h1>
 
-    <form action="/../Proyecto WEB/php/Login.php" method="POST">
-        <label>Usuario: </label>
-        <input type="text" name="username" id="username" /><br><br>
-        <label>Contraseña:</label>
-        <input type="password" name="password" id="password" /><br><br>
-        <input type="submit" value="Ingresar" />
-    </form>
-    <br>
-    <button><a href="/../Proyecto WEB/index.html" style="text-decoration: none;">Regresar</a> </button>
+    <!--Jumbotron-->
+    <div class="jumbotron rounded-0 img-jmbo text-center">
+        <div class="container"><br>
+            <h1>Iniciar Sesión</h1>
+            <p>Ingrese su usuario y constraseña</p>
+            <div class="col text-center mt-4">
+                <a href="/../Proyecto WEB/index.html" class="btn btn-success" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
+            </div>
+        </div>
+    </div>
 
+     <!--Escudos-->
+     <div class="container p-4 bg-dark mb-3 roundend-0">
+        <div class="row">
+            <div class="col-md-3 escom-img">
+            <img src="/../Proyecto WEB/img/escudoESCOM.png" width="180" height="150" class="img-responsive mx-auto d-block zoom centrar-img" alt="ESCOM">
+            </div>
+            <div class="col-md-6 "></br>
+                <h2 class="text-center resize1">Instituto Politécnico Nacional</h2>
+                <h3 class="text-center resize2">Escuela Superior de Cómputo</h3>
+            </div>
+            <div class="col-md-3 ipn-img">
+            <img src="/../Proyecto WEB/img/ipn.png" width="150" height="180" class="img-responsive mx-auto d-block zoom centrar-img"" alt="IPN">
+            </div>
+        </div>
+    </div>
 
+    <div class="contact-box">
+        <div class="container bg-dark p-6">
+            <div class="user-img">
+                <img src="/../Proyecto WEB/img/admin.png" class="img-fluid img-thumbnail rounded-circle mx-auto d-block zoom " alt="ESCOM ">
+            </div>
+            <!--Inicio de sesion-->
+            <form action="/../Proyecto WEB/php/Login.php" class="needs-validation" autocomplete="off" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="username">Usuario<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Ingrese Usuario" name="username" id="username" required/>
+                    <div class="invalid-feedback">Proporcione un usuario válido</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña<span class="text-danger ">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password" size="10" maxlength="20 " placeholder="Ingrese el password" required>
+                    <div class="invalid-feedback ">Proporcione una contraseña válida</div>
+                </div>
+                <input type="submit" class="btn btn-danger btn-lg btn-block mt-4" value="Ingresar"/>
+            </form>
+            <small class="d-inline-block text-muted mt-2">Instituto Politécnico Nacional | Escuela Superior de Cómputo | 2021</small>
+        </div>
+        </div>
+
+    <!--Footer-->
+    <div class="container-fluid bg-dark text-center p-3">
+        <p class="small">&copy;Todos los derechos reservados a la Escuela Superior de Cómputo</p>
+    </div>
+
+    <!--Validacion de formulario por JScript-->
+    <script language="javascript" type="text/javascript" src="/../Proyecto WEB/js/script1.js"></script>
+    <noscript>El navegador no soporta Javascript</noscript>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="/../Proyecto WEB/js/bootstrap.min.js"></script>
 </body>
-
-</html>
-</body>
-
 </html>

@@ -5,41 +5,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styleIn.css">
-    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/../Proyecto WEB/css/bootstrap.min.css">
+
+    <!--Hoja de estilos-->
+    <link rel="preload" href="/../Proyecto WEB/css/style.css" as="style" />
+    <link href="/../Proyecto WEB/css/style.css" rel="stylesheet">
+
+    <!--Font Awesome Iconos-->
+    <link href="/../Proyecto WEB/css/all.css" rel="stylesheet">
+    <script defer src="/Proyecto WEB/js/all.js"></script>
+
+    <!--Estilo fuente: Roboto-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
     <title>Bienvenido</title>
 </head>
 
 <body>
-    <section id="inicio">
-        <h1>Bienvenido</h1>
-        <h1>Selecciona alguna de las opciones</h1>
-        <div class="tarjeta">
-            <div class="contenido">
-                <div class="admin">
-                    <div class="imagen">
-                        <a href="/../Proyecto WEB/login.html"><img src="img/prof.png" title="Selecciona si eres un administrador"></a>
-                    </div>
-                    <div class="texto">
-                        <a href="/../Proyecto WEB/login.html">
-                            <h3>Administrador</h3>
-                        </a>
-                    </div>
-                </div>
-                <div class="alumno">
-                    <div class="imagen">
-                        <a href="/../Proyecto WEB/formulario.html"><img src="img/estu.png" title="Seleccion si eres un estudiante"></a>
-                    </div>
-                    <div class="textoal">
-                        <a href="/../Proyecto WEB/formulario.html">
-                            <h3>Estudiante</h3>
-                        </a>
-                    </div>
-                </div>
+    
+    <!--Jumbotron-->
+    <div class="jumbotron rounded-0 img-jmbo text-center">
+        <div class="container"><br>
+            <h1>¡Bienvenido!</h1>
+            <p>Selecciona alguna de las opciones</p>
+        </div>
+    </div>
+
+    <!--Escudos-->
+    <div class="container p-4 bg-dark mb-5 roundend-0">
+        <div class="row">
+            <div class="col-md-3 escom-img">
+            <img src="/../Proyecto WEB/img/escudoESCOM.png" width="180" height="150" class="img-responsive mx-auto d-block zoom centrar-img" alt="ESCOM">
+            </div>
+            <div class="col-md-6 "></br>
+                <h2 class="text-center resize1">Instituto Politécnico Nacional</h2>
+                <h3 class="text-center resize2">Escuela Superior de Cómputo</h3>
+            </div>
+            <div class="col-md-3 ipn-img">
+            <img src="/../Proyecto WEB/img/ipn.png" width="150" height="180" class="img-responsive mx-auto d-block zoom centrar-img"" alt="IPN">
             </div>
         </div>
-    </section>
+    </div>
 
+    <!--Cards-->
+    <div class="container mb-5">        
+    <div class="row">
+
+        <!--Administrator Card-->
+        <div class="col-md-6 mt-3">
+          <div class="card bg-dark p-5">
+            <a href="/../Proyecto WEB/login.html"><img class="card-img-top zoom" src="/../Proyecto WEB/img/admin.png" alt="Administrador"></a>
+            <div class="card-body">
+              <h5 class="card-title">Administrador</h5>
+              <p class="card-text">Selecciona si eres un administrador.</p>
+              <a href="/../Proyecto WEB/login.html" class="btn btn-outline-danger btn-block">Acceder <i class="fas fa-sign-in-alt"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!--Student Card-->
+        <div class="col-md-6 mt-3">
+          <div class="card bg-dark p-5">
+            <a href="/../Proyecto WEB/formulario.html"><img class="card-img-top zoom" src="/../Proyecto WEB/img/estudiante.png" alt="Estudiante"></a>
+            <div class="card-body">
+              <h5 class="card-title">Estudiante</h5>
+              <p class="card-text">Selecciona si eres un estudiante.</p>
+              <a href="/../Proyecto WEB/formulario.html" class="btn btn-outline-primary btn-block">Acceder <i class="fas fa-sign-in-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class="container-fluid bg-dark text-center p-3">
+       <p class="small">&copy;Todos los derechos reservados a la Escuela Superior de Cómputo</p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="/../Proyecto WEB/js/bootstrap.min.js"></script>
 </body>
 
 </html>
