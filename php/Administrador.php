@@ -60,7 +60,7 @@
                 <h1 id="Bienvenido">Bienvenido <?php echo $_SESSION['login_user']; ?></h1>
                 <p>Seleccione una operación CRUD</p>
                 <div class="col text-center mt-4">
-                    <a href="/../Proyecto WEB/index.html" class="btn btn-success" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
+                    <a href="/../Proyecto WEB/login.html" class="btn btn-danger" role="button">Cerrar Sesión <i class="fas fa-window-close"></i></a>
                 </div>
             </div>
     </div>
@@ -92,12 +92,12 @@
             </ul>
         </div>
     </nav>
-    
+    <!--Menu opciones para mostarr datos-->
     <div class="container mt-4" id="menu">
         <div class="row align-items-center bg-dark">
-            <div class="col-md-7 p-4">
+            <div class="col-md-4 p-4">
                 <div class="dropdown">
-                <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mostar Datos por</button>
+                <button class="btn btn-outline-danger dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mostar Datos por</button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="/../Proyecto WEB/php/Administrador.php">Datos Personales</a>
                     <a class="dropdown-item" href="/../Proyecto WEB/php/AdminDatosCont.php">Contacto</a>
@@ -105,7 +105,10 @@
                 </div>
                 </div>
             </div>
-            <div class="col-md-5 p-4 input-group">
+            <div class="col-md-3 p-4 align-items-center">
+                <p class="lead text-center font-weight-bold"><i class="fas fa-graduation-cap"></i> Datos Personales</p>
+            </div>
+            <div class="col-md-5 p-4 input-group"> <!--Busqueda Datos-->
                 <span class="input-group-prepend">
                     <span class="input-group-text bg-dark border-dark">
                     <i class="fas fa-search" id="lupa"></i>
@@ -116,6 +119,7 @@
         </div>
     </div>
 
+    <!--Tabla responsiva-->
     <div class="container mt-3 mb-3">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-condensed table-dark bg-dark">
@@ -133,16 +137,15 @@
                 <tbody id="myTable">
                     <?php
                     //Lenando la tabla con cada uno de los valores que encuentre en la base
-                        foreach($result as $row){?>
+                    foreach($result as $row){?>
                         <tr class="text-center">
-                            <td><i class="fas fa-graduation-cap"></i>&nbsp;<?php echo $row['NoBoleta']; ?></td>
-                            <td><?php echo $row['Nombre']; ?></td>
-                            <td><?php echo $row['ApellidoPaterno']; ?></td>
-                            <td><?php echo $row['ApellidoMaterno']; ?></td>
-                            <td><?php echo $row['FechaNacimiento']; ?></td>
-                            <td><?php echo $row['Genero']; ?></td>
-                            <td><?php echo $row['CURP']; ?></td>
-                        
+                            <td class="align-middle"><?php echo $row['NoBoleta']; ?></td>
+                            <td class="align-middle"><?php echo $row['Nombre']; ?></td>
+                            <td class="align-middle"><?php echo $row['ApellidoPaterno']; ?></td>
+                            <td class="align-middle"><?php echo $row['ApellidoMaterno']; ?></td>
+                            <td class="align-middle"><?php echo $row['FechaNacimiento']; ?></td>
+                            <td class="align-middle"><?php echo $row['Genero']; ?></td>
+                            <td class="align-middle"><?php echo $row['CURP']; ?></td>
                         </tr>
                     <?php } ?>
                 </tbody>
@@ -156,17 +159,8 @@
     </div>
     
     <!--JQuery para búsqueda-->
-    <script>
-        $(document).ready(function(){
-        $("#myInput").on("keyup", function() {
-            var value = $(this).val().toUpperCase();
-            $("#myTable tr").filter(function() {
-            $(this).toggle($(this).text().toUpperCase().indexOf(value) > -1)
-            });
-        });
-        });
-    </script>
-
+    <script language="javascript" type="text/javascript" src="/../Proyecto WEB/js/busqueda.js"></script>
+    <noscript>El navegador no soporta Javascript</noscript>
 
     </body>
 </html>
