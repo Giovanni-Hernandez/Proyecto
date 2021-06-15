@@ -108,7 +108,7 @@
     <!--Barra de navegacion-->
     <nav class="navbar navbar-expand-md sticky-top rounded-0 navbar-dark bg-primary">
         <a class="navbar-brand font-weight-bold zoom" href="#">
-            <img src="/../Proyecto WEB/img/escudoESCOM.png" alt="IPN" style="width:40px;">
+            <img src="/../Proyecto WEB/img/escom-blanco.png" alt="IPN" style="width:40px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>

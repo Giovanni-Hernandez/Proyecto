@@ -99,7 +99,7 @@
     <!--Barra de navegacion-->
     <nav class="navbar navbar-expand-md sticky-top rounded-0 navbar-dark bg-primary">
         <a class="navbar-brand font-weight-bold zoom" href="#">
-            <img src="/../Proyecto WEB/img/escudoESCOM.png" alt="IPN" style="width:40px;">
+            <img src="/../Proyecto WEB/img/escom-blanco.png" alt="IPN" style="width:40px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -346,11 +346,11 @@
                             <div class="form-group col-md-7">
                                 <label for="opcionEscom">ESCOM fue tu<span class="text-danger">*</span></label>
                                 <select <?php echo 'value = "'.$_SESSION['opcionEscom'].'"'; ?> class="form-control" id="opcionEscom" name="opcionEscom" required>
-                                    <option <?php if($_SESSION['opcionEscom'] == "Selecciona la opción"){ echo 'selected';} ?> value = "Selecciona la opción">Selecciona la opción</option>
-                                    <option <?php if($_SESSION['opcionEscom'] == "Primera opcion"){ echo 'selected';} ?> value = "Primera opcion">Primera opción</option>
-                                    <option <?php if($_SESSION['opcionEscom'] == "Segunda opcion"){ echo 'selected';} ?> value = "Segunda opcion">Segunda opción</option>
-                                    <option <?php if($_SESSION['opcionEscom'] == "Tercera opcion"){ echo 'selected';} ?> value = "Tercera opcion">Tercera opción</option>
-                                    <option <?php if($_SESSION['opcionEscom'] == "Cuarta opcion"){ echo 'selected';} ?> value = "Cuarta opcion">Cuarta opción</option>
+                                    <option <?php if($_SESSION['opcionEscom'] == "Selecciona la opcion"){ echo 'selected';} ?> value = "Selecciona la opción">Selecciona la opcion</option>
+                                    <option <?php if($_SESSION['opcionEscom'] == "Primera opcion"){ echo 'selected';} ?> value = "Primera opcion">Primera opcion</option>
+                                    <option <?php if($_SESSION['opcionEscom'] == "Segunda opcion"){ echo 'selected';} ?> value = "Segunda opcion">Segunda opcion</option>
+                                    <option <?php if($_SESSION['opcionEscom'] == "Tercera opcion"){ echo 'selected';} ?> value = "Tercera opcion">Tercera opcion</option>
+                                    <option <?php if($_SESSION['opcionEscom'] == "Cuarta opcion"){ echo 'selected';} ?> value = "Cuarta opcion">Cuarta opcion</option>
                                 </select>
                                 <div class="valid-feedback" id="valEscom">¡Ok!</div>
                                 <div class="invalid-feedback" id="valNoEscom">Por favor, seleccione una opción</div>
