@@ -52,14 +52,13 @@
 </head>
 
 <!--Links y funciones extra de JS-->
-<script type="text/javascript" src="/../Proyecto WEB/js/valForm.js"></script>
 <script type="text/javascript" src="/../Proyecto WEB/js/validacionForm.js"></script>
 <script type="text/javascript" src="/../Proyecto WEB/js/mostrarDatos.js"></script>
 <script type="text/javascript">
     function mostrarCampo() {
         var escuela = document.getElementById("escuela").value;
 
-        if (escuela == "otro") {
+        if (escuela == "Otro") {
             document.getElementById("escNombreTxt").style.display = "block";
             document.getElementById("lblescNombreTxt").style.display = "block";
         } else {
@@ -214,7 +213,7 @@
                         <div class="row mt-3 ">
                             <div class="form-group col-lg-6 ">
                                 <label for="escuela ">Escuela de procedencia<span class="text-danger ">*</span></label>
-                                <select class="form-control " id="escuela" name="escuela" required onchange="mostrarCampo()">
+                                <select class="form-control " id="escuela" name="escuela" required>
                                     <option selected <?php echo 'value = "'.$_SESSION['escuela'].'"'; ?>><?php echo $_SESSION['escuela']; ?></option>
                                 </select>
                                 <div class="valid-feedback" id="valEsc">¡Ok!</div>
@@ -253,7 +252,7 @@
                     </fieldset>
                     
                     <input id ="btnRegresar" type="button" class="btn btn-outline-light btn-lg mt-4" value="Retroceder" />
-                    <input id ="btnContinuar" type="button" class="btn btn-outline-light btn-lg mt-4" style="float: right;" value="Continuar" />
+                    <input id ="btnContinuar" type="button" class="btn btn-outline-light btn-lg mt-4" style="float: right;" value="Continuar" onclick="mostrarCampo();" />
                     <input id ="btnModificar" type="button" class="btn btn-primary btn-lg btn-block mt-4" value="Modificar" />
                     <input id ="btnRegistrar" type="submit" class="btn btn-primary btn-lg btn-block mt-4 btn-success" value="Registrarme" />
             </form>
