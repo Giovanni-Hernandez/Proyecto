@@ -1,5 +1,6 @@
 <?php
    
+   session_start();
    include("Config.php");
    
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
@@ -12,24 +13,24 @@
       if($_SERVER["REQUEST_METHOD"] == "POST"){
 
           //Obteniendo los values del formulario
-         $boleta1 = $_POST["boleta"];
-         $nombre1 = $_POST["nombre"];
-         $apPat1 = $_POST["apellidop"];
-         $apMat1 = $_POST["apellidom"];
-         $fecha = $_POST["fecha"];
-         $CURP1 = $_POST["curp"];
-         $genero = $_POST['Sexo'];
-         $calleynum1 = $_POST["calleynum"];
-         $colonia1 = $_POST["col"];
-         $codigo = $_POST["postal"];
-         $telefono = $_POST["tel"];
-         $correo = $_POST["correo"];
-         $dirCorre = $_POST["dircor"];
-         $escuela1 = $_POST["escuela"];
-         $estado1 = $_POST["estado"];
-         $nomescuela1 = $_POST["escNombreTxt"];
-         $escProme = $_POST["escPromedio"];
-         $opcionEsc1 = $_POST["opcionEscom"];
+         $boleta1 = $_SESSION['boleta'];
+         $nombre1 = $_SESSION['nombre'];
+         $apPat1 = $_SESSION['apellidop'];
+         $apMat1 = $_SESSION['apellidom'];
+         $fecha = $_SESSION['fecha'];
+         $CURP1 = $_SESSION['curp'];
+         $genero = $_SESSION['Sexo'];
+         $calleynum1 = $_SESSION['calleynum'];
+         $colonia1 = $_SESSION['col'];
+         $codigo = $_SESSION['postal'];
+         $telefono = $_SESSION['tel'];
+         $correo = $_SESSION['correo'];
+         $dirCorre = $_SESSION['dircor'];
+         $escuela1 = $_SESSION['escuela'];
+         $estado1 = $_SESSION['estado'];
+         $nomescuela1 = $_SESSION['escNombreTxt'];
+         $escProme = $_SESSION['escPromedio'];
+         $opcionEsc1 = $_SESSION['opcionEscom'];
          $correo.= $dirCorre;
         
          $boleta = strtoupper($boleta1);
