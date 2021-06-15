@@ -61,7 +61,7 @@
     function mostrarCampo() {
         var escuela = document.getElementById("escuela").value;
 
-        if (escuela == "otro") {
+        if (escuela == "Otro") {
             document.getElementById("escNombreTxt").style.display = "block";
             document.getElementById("lblescNombreTxt").style.display = "block";
         } else {
