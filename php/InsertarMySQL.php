@@ -32,6 +32,8 @@
          $escProme = $_SESSION['escPromedio'];
          $opcionEsc1 = $_SESSION['opcionEscom'];
          $correo.= $dirCorre;
+
+         session_destroy();
         
          $boleta = strtoupper($boleta1);
          $nombre = strtoupper($nombre1);
