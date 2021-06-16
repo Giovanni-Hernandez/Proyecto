@@ -18,7 +18,7 @@
         if($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $boleta = mysqli_real_escape_string($db,$_POST['txtnumero']);
-            $sql = "SELECT NoBoleta, Nombre, ApellidoPaterno, ApellidoMaterno, FechaNacimiento, Genero, CURP, CalleYNumero, Colonia, CodigoPostal, TelefonoOCelular, Correo, EscuelaProcedencia, EntidadFederativa, NombreEscuela, Promedio, OpcionEscom FROM registroalumnos WHERE NoBoleta = {$boleta}";
+            $sql = "SELECT NoBoleta, Nombre, ApellidoPaterno, ApellidoMaterno, FechaNacimiento, Genero, CURP, CalleYNumero, Colonia, CodigoPostal, TelefonoOCelular, Correo, EscuelaProcedencia, EntidadFederativa, NombreEscuela, Promedio, OpcionEscom FROM registroalumnos WHERE NoBoleta = '{$boleta}'";
             $alumno = mysqli_query($db, $sql);
             $datos = mysqli_fetch_array(($alumno));
             $bandera = mysqli_num_rows($alumno);//Almacenamos el valor de filas encontradas

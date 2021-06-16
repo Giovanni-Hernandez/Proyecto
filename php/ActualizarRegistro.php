@@ -19,7 +19,7 @@
          $boleta = mysqli_real_escape_string($db,$_POST['txtnumero']);
         
         //Codigo y ejucion del SQL query
-        $sqlcodgo = "SELECT NoBoleta, Nombre, ApellidoPaterno, ApellidoMaterno, FechaNacimiento, Genero, CURP, CalleYNumero, Colonia, CodigoPostal, TelefonoOCelular, Correo, EscuelaProcedencia, EntidadFederativa, NombreEscuela, Promedio, OpcionEscom FROM registroalumnos WHERE NoBoleta = {$boleta}";
+        $sqlcodgo = "SELECT NoBoleta, Nombre, ApellidoPaterno, ApellidoMaterno, FechaNacimiento, Genero, CURP, CalleYNumero, Colonia, CodigoPostal, TelefonoOCelular, Correo, EscuelaProcedencia, EntidadFederativa, NombreEscuela, Promedio, OpcionEscom FROM registroalumnos WHERE NoBoleta = '{$boleta}'";
         $result = mysqli_query($db,$sqlcodgo);
         $datos = mysqli_fetch_array(($result));
         $bandera = mysqli_num_rows($result);//Almacenamos el valor de filas encontradas

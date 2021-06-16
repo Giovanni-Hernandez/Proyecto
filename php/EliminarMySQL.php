@@ -20,7 +20,7 @@
         $boleta = mysqli_real_escape_string($db,$_POST['txtnumero']);
         echo $boleta;
         //Codigo y ejucion del SQL query
-        $sqlcodgo = "DELETE FROM registroalumnos WHERE NoBoleta = {$boleta}";
+        $sqlcodgo = "DELETE FROM registroalumnos WHERE NoBoleta = '{$boleta}'";
         $result = mysqli_query($db,$sqlcodgo);
         header("location: /../Proyecto WEB/php/Administrador.php");
      }
