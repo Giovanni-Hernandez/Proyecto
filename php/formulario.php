@@ -1,30 +1,5 @@
 <?php
-
     session_start();
-
-    if(!isset($_SESSION['modificacion'])){
-
-        $_SESSION["boleta"] = "";
-        $_SESSION["nombre"] = "";
-        $_SESSION["apellidop"] = "";
-        $_SESSION["apellidom"] = "";
-        $_SESSION["fecha"] = "";
-        $_SESSION["curp"] = "";
-        $_SESSION["Sexo"] = "";
-        $_SESSION["calleynum"] = "";
-        $_SESSION["col"] = "";
-        $_SESSION["postal"] = "16720";
-        $_SESSION["tel"] = "";
-        $_SESSION["correo"] = "";
-        $_SESSION["dircor"] = "@gmail.com";
-        $_SESSION["escuela"] = "Selecciona tu escuela de procedencia";
-        $_SESSION["estado"] = "Selecciona tu estado de procedencia";
-        $_SESSION["escNombreTxt"] = "";
-        $_SESSION["escPromedio"] = "";
-        $_SESSION["opcionEscom"] = "Selecciona la opción";
-
-        $_SESSION['id'] = session_id();
-    }
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -357,7 +332,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <input type="reset" class="btn btn-outline-light btn-lg mt-4" value="Limpiar" />
+                    <input type="button" class="btn btn-outline-light btn-lg mt-4" onclick="location.href='/../Proyecto WEB/php/crearSesionAlumno.php';" value="Limpiar" />
                     <input type="submit" class="btn btn-primary btn-lg btn-block mt-4" value="Continuar" />
             </form>
             <small class="d-inline-block text-muted mt-2">Instituto Politécnico Nacional | Escuela Superior de Cómputo | 2021</small>

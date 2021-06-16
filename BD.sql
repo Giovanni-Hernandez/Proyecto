@@ -14,15 +14,35 @@ CREATE TABLE grupo (
   idGrupo int NOT NULL AUTO_INCREMENT,
   Nombre varchar(5) NOT NULL,
   horario datetime NOT NULL,
+  salon varchar(5) NOT NULL,
   PRIMARY KEY (idGrupo)
 );
 
-INSERT INTO grupo (Nombre, horario) VALUES('1CM1', '2021-08-23 09:00:00');
-INSERT INTO grupo (Nombre, horario) VALUES('1CM2', '2021-08-23 10:45:00');
-INSERT INTO grupo (Nombre, horario) VALUES('1CM3', '2021-08-23 12:30:00');
-INSERT INTO grupo (Nombre, horario) VALUES('1CM4', '2021-08-24 09:00:00');
-INSERT INTO grupo (Nombre, horario) VALUES('1CM5', '2021-08-24 10:45:00');
-INSERT INTO grupo (Nombre, horario) VALUES('1CM6', '2021-08-24 12:30:00');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX1', '2021-08-02 09:00:00', '1104');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX2', '2021-08-02 09:00:00', '1105');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX3', '2021-08-02 09:00:00', '1106');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX4', '2021-08-02 09:00:00', '1107');
+
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX5', '2021-08-02 10:45:00', '1104');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX6', '2021-08-02 10:45:00', '1105');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX7', '2021-08-02 10:45:00', '1106');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX8', '2021-08-02 10:45:00', '1107');
+
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX9', '2021-08-02 12:30:00', '1104');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX10', '2021-08-02 12:30:00', '1105');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX11', '2021-08-02 12:30:00', '1106');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX12', '2021-08-02 12:30:00', '1107');
+
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX13', '2021-08-02 14:15:00', '1104');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX14', '2021-08-02 14:15:00', '1105');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX15', '2021-08-02 14:15:00', '1106');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX16', '2021-08-02 14:15:00', '1107');
+
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX17', '2021-08-02 16:00:00', '1104');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX18', '2021-08-02 16:00:00', '1105');
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX19', '2021-08-02 16:00:00', '1106');
+
+INSERT INTO grupo (Nombre, horario, salon) VALUES('1EX20', '2021-08-09 14:00:00', '1104');
 
 CREATE TABLE registroalumnos (
   NoBoleta varchar(12) NOT NULL,
@@ -71,13 +91,39 @@ IN OpcionEscom varchar(45)
 BEGIN
   DECLARE grupo int DEFAULT 1;
   DECLARE inscritos int;
-  
-  buscar_grupo : LOOP
-    SELECT COUNT(*) into inscritos FROM registroalumnos WHERE idGrupo = grupo;
+  DECLARE fecha DATE;
 
-    IF(grupo = 6) THEN
+  SELECT CURDATE() INTO fecha;
+
+  buscar_grupo : LOOP
+    SELECT COUNT(*) INTO inscritos FROM registroalumnos WHERE idGrupo = grupo;
+
+    IF(grupo = 21) THEN
       LEAVE buscar_grupo;
     END IF;
+
+    IF ( fecha > '2021-08-02') THEN
+		INSERT INTO registroalumnos VALUES (NoBoleta, 
+                                          Nombre, 
+                                          ApellidoPaterno, 
+                                          ApellidoMaterno, 
+                                          FechaNacimiento, 
+                                          Genero, 
+                                          CURP, 
+                                          CalleYNumero, 
+                                          Colonia,
+                                          CodigoPostal,
+                                          TelefonoOCelular,
+                                          Correo,
+                                          EscuelaProcedencia, 
+                                          EntidadFederativa, 
+                                          NombreEscuela, 
+                                          Promedio, 
+                                          OpcionEscom, 
+                                          20);
+      LEAVE buscar_grupo;
+    END IF;
+		
 
     IF (inscritos < 25) THEN
       INSERT INTO registroalumnos VALUES (NoBoleta, 
@@ -107,13 +153,3 @@ BEGIN
 END; //
 
 DELIMITER ;
-
-
-CALL inscribir('1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
-CALL inscribir('2', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
-CALL inscribir('3', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
-CALL inscribir('4', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
-CALL inscribir('5', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
-CALL inscribir('6', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
-CALL inscribir('7', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
-CALL inscribir('8', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');

@@ -20,8 +20,6 @@
     $_SESSION["escNombreTxt"] = $_POST["escNombreTxt"];
     $_SESSION["escPromedio"] = $_POST["escPromedio"];
     $_SESSION["opcionEscom"] = $_POST["opcionEscom"];
-
-    $_SESSION["modificacion"] = "activado";
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
