@@ -10,7 +10,7 @@
     $_SESSION["Sexo"] = "";
     $_SESSION["calleynum"] = "";
     $_SESSION["col"] = "";
-    $_SESSION["postal"] = "16720";
+    $_SESSION["postal"] = "";
     $_SESSION["tel"] = "";
     $_SESSION["correo"] = "";
     $_SESSION["dircor"] = "@gmail.com";

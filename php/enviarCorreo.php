@@ -13,7 +13,7 @@
 	$pdf->Cell(40,20,'Hola grupo 2CM14! (Mayo 2021)');
 	$doc = $pdf->Output('', 'S');
 	
-	function enviarCorreo($documentoCadena)
+	function enviarCorreo($documentoCadena, $boleta)
 	{
 		require 'phpmailer/PHPMailer.php';
 		require 'phpmailer/SMTP.php';
