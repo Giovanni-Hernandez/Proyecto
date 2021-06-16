@@ -78,7 +78,7 @@
                     <a class="nav-link" href="/../Proyecto WEB/eliminar.html">Eliminar un registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../Proyecto WEB/php/formulario.php">Crear un registro</a>
+                    <a class="nav-link" href="/../Proyecto WEB/php/crearSesionAlumno.php">Crear un registro</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/../Proyecto WEB/actualizar.html">Actualizar registro</a>
