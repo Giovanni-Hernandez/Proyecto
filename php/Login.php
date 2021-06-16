@@ -30,8 +30,10 @@
              header("location: /../Proyecto WEB/php/Administrador.php");
          }
          else{
-             $error = "Usuario o contraseña incorretcots. Intente de nuevo";
-             echo $error;
+            echo "<script>
+                 alert('Usuario o contraseña incorrectos. Intentelo de nuevo');
+                 window.location= '/../Proyecto WEB/login.html'
+                 </script>";
          }
  
      }

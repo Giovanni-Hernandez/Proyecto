@@ -31,10 +31,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="/../Proyecto WEB/js/bootstrap.min.js"></script>
+    <script src="/../Proyecto WEB/js/validacionForm.js"></script>
+    <script src="/../Proyecto WEB/js/valForm.js"></script>
 
     <title>Actualizar Registro</title>
 
 </head>
+
 <body>
 
     <!--Jumbotron-->
@@ -59,7 +62,7 @@
             <form action="/../Proyecto WEB/php/ActualizarRegistro.php" method="POST" onsubmit="return valCampo()" class="needs-validation" autocomplete="off" novalidate>
                 <div class="form-group">
                     <label for="txtnumero">No. de boleta<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" maxlength="10" id="txtnumero" name="txtnumero" required><div class="valid-feedback">¡Válido!</div><div class="invalid-feedback">Proporcione un no. de boleta válido</div>
+                    <input type="text" class="form-control" maxlength="10" id="txtnumero" name="txtnumero" required onkeypress="return valiBoleta(event)" style="text-transform: uppercase;" onchange="numBoleta()" autocomplete="off">
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
@@ -84,4 +87,5 @@
     <script language="javascript" type="text/javascript" src="/../Proyecto WEB/js/script1.js"></script>
     <noscript>El navegador no soporta Javascript</noscript>
 </body>
+
 </html>

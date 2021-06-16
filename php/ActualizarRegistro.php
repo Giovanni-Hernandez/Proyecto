@@ -16,8 +16,9 @@
       if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         //Obteniendo el input del formulario
-         $boleta = mysqli_real_escape_string($db,$_POST['txtnumero']);
-        
+         $boleta1 = mysqli_real_escape_string($db,$_POST['txtnumero']);
+         $boleta =  strtoupper($boleta1);
+
         //Codigo y ejucion del SQL query
         $sqlcodgo = "SELECT NoBoleta, Nombre, ApellidoPaterno, ApellidoMaterno, FechaNacimiento, Genero, CURP, CalleYNumero, Colonia, CodigoPostal, TelefonoOCelular, Correo, EscuelaProcedencia, EntidadFederativa, NombreEscuela, Promedio, OpcionEscom FROM registroalumnos WHERE NoBoleta = '{$boleta}'";
         $result = mysqli_query($db,$sqlcodgo);
