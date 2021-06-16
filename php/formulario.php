@@ -205,7 +205,7 @@
                         <div class="row mt-2">
                             <div class="form-group col-lg-4 ">
                                 <label for="tel ">Tel&eacute;fono o celular<span class="text-danger ">*</span></label>
-                                <input <?php echo 'value = "'.$_SESSION['tel'].'"'; ?> type="text" class="form-control " id="tel" name="tel" size="10 " maxlength="12 " required onkeypress="return soloNumeros(event)" autocomplete="off">
+                                <input <?php echo 'value = "'.$_SESSION['tel'].'"'; ?> type="text" class="form-control " id="tel" name="tel" size="10 " maxlength="10" required onkeypress="return soloNumeros(event)" autocomplete="off">
                                 <div class="valid-feedback ">¡Válido!</div>
                                 <div class="invalid-feedback ">Proporcione un teléfono válido</div>
                             </div>
