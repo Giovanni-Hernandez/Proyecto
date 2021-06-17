@@ -2,8 +2,10 @@
 
     session_start();
     include("Config.php");
+    include("sentenciasSql.php");
     include("GenerarPDF.php");
     include("enviarCorreo.php");
+
 
     $doc = generarPdf($_SESSION['boleta'], 'S');
 

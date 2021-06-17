@@ -2,6 +2,7 @@
    
    session_start();
    include("Config.php");
+   include("sentenciasSql.php");
    
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
@@ -50,11 +51,20 @@
 
          //Metiedno el valor a la base de datos
 
-         if(mysqli_query($db, $sql)){
+         if(existeAlumno($boleta)){
+            echo "<script>
+                 alert('Ya existe un alumno con boleta {$boleta}');
+                 window.location= '/../Proyecto WEB/index.html'
+                 </script>";
+         }
+         else if(mysqli_query($db, $sql)){
             header("Location: /../Proyecto WEB/php/generarCorreo.php");
          }
          else{
-            echo "Error " .$sql . "<br>" . mysqli_error($db);
+            echo "<script>
+                 alert('El registro no se pudo concretar');
+                 window.location= '/../Proyecto WEB/index.html'
+                 </script>";
          }
  
      }

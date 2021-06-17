@@ -20,6 +20,7 @@
     $_SESSION["escPromedio"] = "";
     $_SESSION["opcionEscom"] = "Selecciona la opción";
 
+    $_SESSION["idSesionAlumno"] = session_id();
+
     header("location: /../Proyecto WEB/php/formulario.php");
-    exit();
 ?>
