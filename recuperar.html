@@ -31,7 +31,7 @@
             <p>Ingrese su número de boleta para recuperar su PDF</p>
             <!--Botón para regresar-->
             <div class="col text-center mt-4">
-                <a href="/../Proyecto WEB/php/formulario.php" class="btn btn-success" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
+                <a href="/../Proyecto WEB/index.html" class="btn btn-success" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
             </div>
         </div>
     </div>
@@ -58,10 +58,10 @@
             <img src="/../Proyecto WEB/img/estudiante.png" class="img-fluid img-thumbnail rounded-circle mx-auto d-block zoom " alt="ESCOM ">
         </div>
         <!--Formulario Recuperar-->
-        <form action="/../Proyecto WEB/php/GenerarPDF.php" method="POST" class="needs-validation" autocomplete="off" novalidate>
+        <form action="/../Proyecto WEB/php/descargarPDF.php" method="POST" class="needs-validation" autocomplete="off" novalidate>
             <div class="form-group">
-                <label for="txtnumero">No. de boleta<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" maxlength="10" id="txtnumero" name="txtnumero" onkeypress="return valiBoleta(event)" style="text-transform: uppercase;" required>
+                <label for="boleta">No. de boleta<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" maxlength="10" id="boleta" name="boleta" onkeypress="return valiBoleta(event)" style="text-transform: uppercase;" required>
                 <div class="valid-feedback">¡Válido!</div><div class="invalid-feedback">Proporcione un no. de boleta válido</div>
             </div>
             <input type="submit" class="btn btn-primary btn-lg btn-block mt-4" value="¡Listo!"/>

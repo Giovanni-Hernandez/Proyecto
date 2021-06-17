@@ -21,7 +21,7 @@
 
 		/* Emisor */
 		$mail->Username = "escom.proyecto.tw@gmail.com";
-		$mail->Password = "equipo2proyecto";
+		$mail->Password = "tecnologiasweb";
 		$mail->Subject = "Comprobante de registro";
 		$mail->setFrom("escom.proyecto.tw@gmail.com", "Escuela Superior de Computación");
 
@@ -52,7 +52,7 @@
 		/* Remitente */
 		$mail->addAddress($registro['correo']);
 
-		return mail -> send();
+		return($mail -> send());
 	}
 
 	function recuperarDatos($boleta)

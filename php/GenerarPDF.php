@@ -1,5 +1,4 @@
 <?php
-    include("Config.php");
     include_once('PDF.php');
 
     function generarPdf($boleta, $filtro)

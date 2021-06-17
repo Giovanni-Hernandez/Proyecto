@@ -1,8 +1,7 @@
 <?php
    
    session_start();
-   include("GenerarPDF.php");
-   include("enviarCorreo.php");
+   include("Config.php");
    
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
@@ -33,8 +32,6 @@
          $escProme = $_SESSION['escPromedio'];
          $opcionEsc1 = $_SESSION['opcionEscom'];
          $correo.= $dirCorre;
-
-         session_destroy();
         
          $boleta = strtoupper($boleta1);
          $nombre = strtoupper($nombre1);
@@ -54,7 +51,7 @@
          //Metiedno el valor a la base de datos
 
          if(mysqli_query($db, $sql)){
-               header("location: /../Proyecto WEB/index.html");
+            header("Location: /../Proyecto WEB/php/generarCorreo.php");
          }
          else{
             echo "Error " .$sql . "<br>" . mysqli_error($db);
