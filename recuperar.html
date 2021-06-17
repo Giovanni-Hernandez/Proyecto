@@ -58,10 +58,11 @@
             <img src="/../Proyecto WEB/img/estudiante.png" class="img-fluid img-thumbnail rounded-circle mx-auto d-block zoom " alt="ESCOM ">
         </div>
         <!--Formulario Recuperar-->
-        <form class="needs-validation" autocomplete="off" novalidate>
+        <form action="/../Proyecto WEB/php/GenerarPDF.php" method="POST" class="needs-validation" autocomplete="off" novalidate>
             <div class="form-group">
-                <label for="boleta">No. de boleta<span class="text-danger">*</span></label>
-                <input type="number" id="boleta" name="boleta" size="10" maxlength="10" class="form-control" placeholder="Boleta" required> <div class="valid-feedback">¡Válido!</div><div class="invalid-feedback">Proporcione un no. de boleta válido</div>
+                <label for="txtnumero">No. de boleta<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" maxlength="10" id="txtnumero" name="txtnumero" onkeypress="return valiBoleta(event)" style="text-transform: uppercase;" required>
+                <div class="valid-feedback">¡Válido!</div><div class="invalid-feedback">Proporcione un no. de boleta válido</div>
             </div>
             <input type="submit" class="btn btn-primary btn-lg btn-block mt-4" value="¡Listo!"/>
         </form>
