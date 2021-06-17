@@ -5,16 +5,6 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
-
-	include("fpdf183/fpdf.php"); 
-		
-	$pdf = new FPDF();
-	$pdf->AddPage();
-	$pdf->SetFont('helvetica','B',20);
-	$pdf->Cell(40,20,'Hola grupo 2CM14! (Mayo 2021)');
-	$doc = $pdf->Output('', 'S');
-
-	$boleta = '2017136121';
 	
 	function enviarCorreo($documentoCadena, $boleta)
 	{
@@ -38,7 +28,7 @@
 		$mail->setFrom("escom.proyecto.tw@gmail.com", "Escuela Superior de Computación");
 
 		/* Recuperar datos del alumno */
-		$registro = recuperarDatos('2017136121');
+		$registro = recuperarDatos($boleta);
 
 		/*Mensaje en HTML*/
 		$mail->isHTML(true);
@@ -59,7 +49,7 @@
 		$mail -> Body = $shtml;
 
 		/* Adjuntar archivo pdf*/
-		$mail->addStringAttachment($documentoCadena, "ComprobanteDeRregistro.pdf");
+		$mail->addStringAttachment($documentoCadena, "ComprobanteDeRegistro.pdf");
 
 		/* Remitente */
 		$mail->addAddress($registro['correo']);
@@ -105,6 +95,4 @@
 						'salon' => $datosGrupo['salon']
 					);
 	}
-
-	enviarCorreo($doc, $boleta);
 ?>
