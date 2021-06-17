@@ -75,16 +75,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/../Proyecto WEB/eliminar.html">Eliminar un registro</a>
+                    <a class="nav-link" href="/../Proyecto WEB/php/eliminar.php">Eliminar un registro</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/../Proyecto WEB/php/crearSesionAlumno.php">Crear un registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../Proyecto WEB/actualizar.html">Actualizar registro</a>
+                    <a class="nav-link" href="/../Proyecto WEB/php/actualizar.php">Actualizar registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../Proyecto WEB/buscar.html">Buscar Alumno</a>
+                    <a class="nav-link" href="/../Proyecto WEB/php/buscar.php">Buscar Alumno</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/../Proyecto WEB/php/CerrarSesion.php">Cerrar Sesion</a>

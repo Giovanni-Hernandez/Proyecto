@@ -27,39 +27,6 @@ function validacion() {
     diaIntro = fechaIntro[8] + fechaIntro[9];
     boleta = boleta.toUpperCase();
 
-    //Validacion de la boleta
-    for (var i = 0; i < boleta.length; i++) {
-        if (boleta[i] == "P" || boleta[i] == "E") {
-            var bandera = 1;
-            break;
-        }
-    }
-
-    if (bandera == 1) {
-        if (boleta[0] != "P" && boleta[1] != "E") {
-            //alert("Verifique su número de boleta");
-            document.getElementById("bolvali").style.display = "none";
-            document.getElementById("bolnovali").style.display = "block";
-            document.getElementById("boleta").style.borderColor = "#dc3545";
-            return false;
-        }
-    }
-
-
-    if (boleta.length < 10 || boleta == "BOLETA") {
-        //alert("Verifique su número de boleta");
-        document.getElementById("bolvali").style.display = "none";
-        document.getElementById("bolnovali").style.display = "block";
-        document.getElementById("boleta").style.borderColor = "#dc3545";
-        return false;
-    }
-
-    if (boleta.length == 10 || (boleta.length == 10 && boleta[0] == "P" && boleta[1] == "E")) {
-        document.getElementById("bolvali").style.display = "block";
-        document.getElementById("bolnovali").style.display = "none";
-        document.getElementById("boleta").style.borderColor = "#28a745";
-    }
-
 
     //Validacion del nombre
     if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
@@ -184,13 +151,21 @@ function numBoleta() {
     }
 
     if (bandera == 1) {
-        if ((boleta[0] != "P" && boleta[1] != "E") || contE > 1 || contP > 1) {
-            //alert("Verifique su número de boleta");
+        if ((boleta[0] != "P" || boleta[1] != "E")) {
+            if (boleta[1] != "P") {
+                //alert("Verifique su número de boleta");
+                document.getElementById("bolvali").style.display = "none";
+                document.getElementById("bolnovali").style.display = "block";
+                document.getElementById("boleta").style.borderColor = "#dc3545";
+            }
+        }
+
+        if ((boleta[0] != "P" || boleta[1] != "E") || contE != 1 || contP != 1) {
             document.getElementById("bolvali").style.display = "none";
             document.getElementById("bolnovali").style.display = "block";
             document.getElementById("boleta").style.borderColor = "#dc3545";
-
         }
+
     }
 
     if (boleta.length < 10 || boleta == "BOLETA") {
@@ -200,11 +175,18 @@ function numBoleta() {
         document.getElementById("boleta").style.borderColor = "#dc3545";
     }
 
-    if ((boleta.length == 10 && boleta[0] == "P" && boleta[1] == "E") && boleta.length == 10 && contE == 1 && contP == 1) {
+    if (((boleta.length == 10 && boleta[0] == "P" && boleta[1] == "E")) && (contE == 1 && contP == 1)) {
         document.getElementById("bolvali").style.display = "block";
         document.getElementById("bolnovali").style.display = "none";
         document.getElementById("boleta").style.borderColor = "#28a745";
     }
+
+    if (((boleta.length == 10 && boleta[0] == "P" && boleta[1] == "P")) && contP == 2) {
+        document.getElementById("bolvali").style.display = "block";
+        document.getElementById("bolnovali").style.display = "none";
+        document.getElementById("boleta").style.borderColor = "#28a745";
+    }
+
 
     if (boleta.length == 10 && contE == 0 && contP == 0) {
         document.getElementById("bolvali").style.display = "block";
