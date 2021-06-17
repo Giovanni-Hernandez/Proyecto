@@ -131,23 +131,23 @@
                         </div>
                         <div class="form-group col-md-8 ">
                             <label for="nombre ">Nombre(s)<span class="text-danger ">*</span></label>
-                            <input <?php echo 'value = "'.$_SESSION["nombre"].'"'; ?> type="text" id="nombre" name="nombre" size="10" maxlength="20 " placeholder="Ingrese el nombre" class="form-control " required onkeypress="return soloLetras(event)" autocomplete="off">
-                            <div class="valid-feedback ">¡Válido!</div>
-                            <div class="invalid-feedback ">Por favor, registre su(s) nombre(s)</div>
+                            <input <?php echo 'value = "'.$_SESSION["nombre"].'"'; ?> type="text" id="nombre" name="nombre" size="10" maxlength="20 " placeholder="Ingrese el nombre" class="form-control " required onkeypress="return soloLetras(event)" onchange ="valiNombre()" autocomplete="off">
+                            <div class="valid-feedback " id="nomval">¡Válido!</div>
+                            <div class="invalid-feedback " id="nomNoval">Por favor, registre su(s) nombre(s)</div>
                         </div>
                     </div>
                     <div class="row mt-2 ">
                         <div class="form-group col-md-6 ">
                             <label for="apellidop ">Apellido Paterno<span class="text-danger ">*</span></label>
-                            <input <?php echo 'value = "'.$_SESSION['apellidop'].'"'; ?> type="text" id="apellidop" name="apellidop" size="10 " maxlength="15 " class="form-control " placeholder="Ingrese Apellido Paterno " required onkeypress="return soloLetras(event)" autocomplete="off">
-                            <div class="valid-feedback " id="bolvali">¡Válido!</div>
-                            <div class="invalid-feedback " id="bolnovali">Por favor, registre su apellido paterno</div>
+                            <input <?php echo 'value = "'.$_SESSION['apellidop'].'"'; ?> type="text" id="apellidop" name="apellidop" size="10 " maxlength="15 " class="form-control " placeholder="Ingrese Apellido Paterno " required onkeypress="return soloLetras(event)" onchange="valiApPat()" autocomplete="off">
+                            <div class="valid-feedback " id="apepvali">¡Válido!</div>
+                            <div class="invalid-feedback " id="apepnovali">Por favor, registre su apellido paterno</div>
                         </div>
                         <div class="form-group col-md-6 ">
                             <label for="apellidom ">Apellido Materno<span class="text-danger ">*</span></label>
-                            <input <?php echo 'value = "'.$_SESSION['apellidom'].'"'; ?> type="text" id="apellidom" name="apellidom" size="10 " maxlength="15 " placeholder="Ingrese Apellido Materno " class="form-control " required onkeypress="return soloLetras(event)" autocomplete="off">
-                            <div class="valid-feedback ">¡Válido!</div>
-                            <div class="invalid-feedback ">Por favor, registre su apellido materno</div>
+                            <input <?php echo 'value = "'.$_SESSION['apellidom'].'"'; ?> type="text" id="apellidom" name="apellidom" size="10 " maxlength="15 " placeholder="Ingrese Apellido Materno " class="form-control " required onkeypress="return soloLetras(event)" onchange="valiApMat()" autocomplete="off">
+                            <div class="valid-feedback " id="apmatval">¡Válido!</div>
+                            <div class="invalid-feedback " id="apmatnoval">Por favor, registre su apellido materno</div>
                         </div>
                     </div>
                     <div class="row mt-2 ">
@@ -166,9 +166,9 @@
                         </div>
                         <div class="form-group col-xl-3 col-md-6 ">
                             <label for="fecha ">Fecha de nacimiento<span class="text-danger ">*</span></label>
-                            <input <?php echo 'value = "'.$_SESSION['fecha'].'"'; ?> type="date" id="fecha" name="fecha" size="5" class="form-control " required>
-                            <div class="valid-feedback ">¡Válido!</div>
-                            <div class="invalid-feedback ">Por favor, registre su fecha de nacimiento</div>
+                            <input <?php echo 'value = "'.$_SESSION['fecha'].'"'; ?> type="date" id="fecha" name="fecha" size="5" class="form-control " onchange="valiFechaNac()" required>
+                            <div class="valid-feedback " id="fechaval">¡Válido!</div>
+                            <div class="invalid-feedback " id="fechanoval">Por favor, registre su fecha de nacimiento</div>
                         </div>
                         <div class="form-group col-xl-6 ">
                             <label for="curp ">CURP<span class="text-danger ">*</span><a href="https://www.gob.mx/curp/" target="_blank"> ¿No conoces tu CURP?</a></label>
@@ -183,31 +183,31 @@
                         <legend class="font-weight-bold " id="contacto">Contacto</legend>
                         <div class="form-group mt-3 ">
                             <label for="calleynum ">Calle y N&uacute;mero<span class="text-danger ">*</span></label>
-                            <input <?php echo 'value = "'.$_SESSION['calleynum'].'"'; ?> type="text" class="form-control " id="calleynum" name="calleynum" size="10 " maxlength="25" required onkeypress="return letrasNumeros(event)" autocomplete="off">
-                            <div class="valid-feedback ">¡Válido!</div>
-                            <div class="invalid-feedback ">Por favor, registre su calle y número</div>
+                            <input <?php echo 'value = "'.$_SESSION['calleynum'].'"'; ?> type="text" class="form-control " id="calleynum" name="calleynum" size="10 " maxlength="25" required onkeypress="return letrasNumeros(event)" autocomplete="off" onchange="valCalle()">
+                            <div class="valid-feedback " id="calleval">¡Válido!</div>
+                            <div class="invalid-feedback " id="callenoval">Por favor, registre su calle y número</div>
                         </div>
                         <div class="row mt-2 ">
                             <div class="form-group col-md-8 ">
                                 <label for="col ">Colonia<span class="text-danger ">*</span></label>
-                                <input <?php echo 'value = "'.$_SESSION['col'].'"'; ?> type="text" class="form-control " id="col" name="col" size="10 " maxlength="20 " required onkeypress="return soloLetras(event)" autocomplete="off">
-                                <div class="valid-feedback ">¡Válido!</div>
-                                <div class="invalid-feedback ">Por favor, registre su colonia</div>
+                                <input <?php echo 'value = "'.$_SESSION['col'].'"'; ?> type="text" class="form-control " id="col" name="col" size="10 " maxlength="20 " required onkeypress="return soloLetras(event)" autocomplete="off" onchange="valColonia()">
+                                <div class="valid-feedback " id="colval">¡Válido!</div>
+                                <div class="invalid-feedback " id="colnoval">Por favor, registre su colonia</div>
                             </div>
 
                             <div class="form-group col-md-4 ">
                                 <label for="postal ">C&oacute;digo Postal<span class="text-danger ">*</span></label>
-                                <input <?php echo 'value = "'.$_SESSION['postal'].'"'; ?> type="text" class="form-control " id="postal" name="postal" size="10 " maxlength="5" required onkeypress="return soloNumeros(event)" autocomplete="off">
-                                <div class="valid-feedback ">¡Válido!</div>
-                                <div class="invalid-feedback ">Por favor, registre su código postal</div>
+                                <input <?php echo 'value = "'.$_SESSION['postal'].'"'; ?> type="text" class="form-control " id="postal" name="postal" size="10 " maxlength="5" required onkeypress="return soloNumeros(event)" autocomplete="off" onchange="valCodigo()">
+                                <div class="valid-feedback " id="codval">¡Válido!</div>
+                                <div class="invalid-feedback "id="codnoval">Por favor, registre su código postal</div>
                             </div>
                         </div>
                         <div class="row mt-2">
                             <div class="form-group col-lg-4 ">
                                 <label for="tel ">Tel&eacute;fono o celular<span class="text-danger ">*</span></label>
-                                <input <?php echo 'value = "'.$_SESSION['tel'].'"'; ?> type="text" class="form-control " id="tel" name="tel" size="10 " maxlength="10" required onkeypress="return soloNumeros(event)" autocomplete="off">
-                                <div class="valid-feedback ">¡Válido!</div>
-                                <div class="invalid-feedback ">Proporcione un teléfono válido</div>
+                                <input <?php echo 'value = "'.$_SESSION['tel'].'"'; ?> type="text" class="form-control " id="tel" name="tel" size="10 " maxlength="10" required onkeypress="return soloNumeros(event)" autocomplete="off" onchange="valTele()">
+                                <div class="valid-feedback " id="telval">¡Válido!</div>
+                                <div class="invalid-feedback " id="telnoval">Proporcione un teléfono válido</div>
                             </div>
                             <div class="form-group col-lg-8 ">
                                 <label for="correo">Correo Electr&oacute;nico<span class="text-danger ">*</span></label>
@@ -266,7 +266,7 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <label for="estado">Entidad federativa de procedencia<span class="text-danger">*</span></label>
-                                <select class="form-control" id="estado" name="estado" required> 
+                                <select class="form-control" id="estado" name="estado" required onchange="validarSelects()"> 
                                     <option <?php if($_SESSION['estado'] == "Selecciona tu estado de procedencia"){ echo 'selected';} ?> value = "Selecciona tu estado de procedencia"> Selecciona tu estado de procedencia</option>
                                     <option <?php if($_SESSION['estado'] == "Aguascalientes"){ echo 'selected';} ?> value = "Aguascalientes">Aguascalientes</option>
                                     <option <?php if($_SESSION['estado'] == "Baja California"){ echo 'selected';} ?> value = "Baja California">Baja California</option>
@@ -320,7 +320,7 @@
 
                             <div class="form-group col-md-7">
                                 <label for="opcionEscom">ESCOM fue tu<span class="text-danger">*</span></label>
-                                <select <?php echo 'value = "'.$_SESSION['opcionEscom'].'"'; ?> class="form-control" id="opcionEscom" name="opcionEscom" required>
+                                <select <?php echo 'value = "'.$_SESSION['opcionEscom'].'"'; ?> class="form-control" id="opcionEscom" name="opcionEscom" required onchange="validarSelects()">
                                     <option <?php if($_SESSION['opcionEscom'] == "Selecciona la opcion"){ echo 'selected';} ?> value = "Selecciona la opción">Selecciona la opcion</option>
                                     <option <?php if($_SESSION['opcionEscom'] == "Primera opcion"){ echo 'selected';} ?> value = "Primera opcion">Primera opcion</option>
                                     <option <?php if($_SESSION['opcionEscom'] == "Segunda opcion"){ echo 'selected';} ?> value = "Segunda opcion">Segunda opcion</option>

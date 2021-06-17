@@ -35,7 +35,7 @@ function validacion() {
     }
 
     //Validacion del apellido Paterno
-    if (apPat == null || apPat.length == 0 || /^\s+$/.test(apPat)) {
+    if (/^\s+$/.test(apPat) || apPat == null || apPat.length == 0) {
         alert("El campo Apellido Paterno no puede estar vacío, verifícalo");
         return false;
     }
@@ -114,7 +114,7 @@ function validacion() {
                 puntos++;
             }
         }
-        if (puntos > 1 || escProme > 10) {
+        if (puntos > 1 || escProme < 6 || escProme > 10) {
             alert("El valor introduido en el campo promedio es erroneo, verificalo");
             return false;
         }
@@ -198,7 +198,7 @@ function numBoleta() {
 function promedio() {
     var escProme = document.getElementById("escPromedio").value;
 
-    if (escProme == null || escProme.length == 0 || /^\s+$/.test(escProme)) {
+    if (escProme == null || escProme.length == 0 || /^\s+$/.test(escProme) || escProme < 6 || escProme > 10) {
         document.getElementById("valPro").style.display = "none";
         document.getElementById("valNoPro").style.display = "block";
         document.getElementById("escPromedio").style.borderColor = "#dc3545";
@@ -211,7 +211,7 @@ function promedio() {
                 puntos++;
             }
         }
-        if (puntos > 1 || escProme > 10) {
+        if (puntos > 1 || escProme < 6 || escProme > 10) {
             document.getElementById("valPro").style.display = "none";
             document.getElementById("valNoPro").style.display = "block";
             document.getElementById("escPromedio").style.borderColor = "#dc3545";
@@ -219,11 +219,191 @@ function promedio() {
     }
 
 
-    if (escProme != null && escProme.length != 0 && puntos < 2) {
+    if (escProme != null && escProme.length != 0 && puntos < 2 && (escProme >= 6 && escProme <= 10)) {
         document.getElementById("valPro").style.display = "block";
         document.getElementById("valNoPro").style.display = "none";
         document.getElementById("escPromedio").style.borderColor = "#28a745";
     }
 
 
+}
+
+function validarSelects() {
+
+    var escuela = document.getElementById("escuela").selectedIndex;
+    var estado = document.getElementById("estado").selectedIndex;
+    var opcionEsc = document.getElementById("opcionEscom").selectedIndex;
+
+    if (escuela == null || escuela == 0) {
+
+        document.getElementById("valEsc").style.display = "none";
+        document.getElementById("valNoEsc").style.display = "block";
+        document.getElementById("escuela").style.borderColor = "#dc3545";
+
+    }
+
+    if (escuela != null && escuela != 0) {
+        document.getElementById("valEsc").style.display = "block";
+        document.getElementById("valNoEsc").style.display = "none";
+        document.getElementById("escuela").style.borderColor = "#28a745";
+    }
+
+    if (estado == null || estado == 0) {
+
+        document.getElementById("valEsta").style.display = "none";
+        document.getElementById("valNoEsta").style.display = "block";
+        document.getElementById("estado").style.borderColor = "#dc3545";
+    }
+
+    if (estado != null && estado != 0) {
+        document.getElementById("valEsta").style.display = "block";
+        document.getElementById("valNoEsta").style.display = "none";
+        document.getElementById("estado").style.borderColor = "#28a745";
+    }
+
+    if (opcionEsc == null || opcionEsc == 0) {
+
+        document.getElementById("valEscom").style.display = "none";
+        document.getElementById("valNoEscom").style.display = "block";
+        document.getElementById("opcionEscom").style.borderColor = "#dc3545";
+    }
+
+    if (opcionEsc != null && opcionEsc != 0) {
+        document.getElementById("valEscom").style.display = "block";
+        document.getElementById("valNoEscom").style.display = "none";
+        document.getElementById("opcionEscom").style.borderColor = "#28a745";
+    }
+}
+
+function valiNombre() {
+    var nombre = document.getElementById("nombre").value;
+
+    //Validacion del nombre
+    if (/^\s+$/.test(nombre) || nombre == null || nombre.length < 2) {
+        document.getElementById("nomval").style.display = "none";
+        document.getElementById("nomNoval").style.display = "block";
+        document.getElementById("nombre").style.borderColor = "#dc3545";
+    } else if (nombre != null && nombre.length > 2) {
+        document.getElementById("nomval").style.display = "block";
+        document.getElementById("nomNoval").style.display = "none";
+        document.getElementById("nombre").style.borderColor = "#28a745";
+    }
+
+}
+
+function valiApPat() {
+
+    var apellidop = document.getElementById("apellidop").value;
+
+    if (/^\s+$/.test(apellidop) || apellidop == null || apellidop.length < 2) {
+        document.getElementById("apepvali").style.display = "none";
+        document.getElementById("apepnovali").style.display = "block";
+        document.getElementById("apellidop").style.borderColor = "#dc3545";
+    } else if (apellidop != null && apellidop.length > 2) {
+        document.getElementById("apepvali").style.display = "block";
+        document.getElementById("apepnovali").style.display = "none";
+        document.getElementById("apellidop").style.borderColor = "#28a745";
+    }
+}
+
+function valiApMat() {
+
+    var apellidom = document.getElementById("apellidom").value;
+
+    if (/^\s+$/.test(apellidom) || apellidom == null || apellidom.length < 2) {
+        document.getElementById("apmatval").style.display = "none";
+        document.getElementById("apmatnoval").style.display = "block";
+        document.getElementById("apellidom").style.borderColor = "#dc3545";
+    } else if (apellidom != null && apellidom.length > 2) {
+        document.getElementById("apmatval").style.display = "block";
+        document.getElementById("apmatnoval").style.display = "none";
+        document.getElementById("apellidom").style.borderColor = "#28a745";
+    }
+}
+
+function valiFechaNac() {
+    //Validacion de la fecha
+    const fechas = new Date();
+    const dia = fechas.getDate();
+    const mes = fechas.getMonth() + 1;
+    const ano = fechas.getFullYear();
+    var fecha = document.getElementById("fecha").value;
+    var fechaIntro = fecha.toString();
+    anoIntro = fechaIntro[0] + fechaIntro[1] + fechaIntro[2] + fechaIntro[3];
+    mesIntro = fechaIntro[5] + fechaIntro[6];
+    diaIntro = fechaIntro[8] + fechaIntro[9];
+
+    if ((anoIntro >= ano && mesIntro >= mes && diaIntro >= dia) || fecha == "" || fecha.length != 10 || anoIntro <= 1950 || anoIntro >= ano) {
+        document.getElementById("fechaval").style.display = "none";
+        document.getElementById("fechanoval").style.display = "block";
+        document.getElementById("fecha").style.borderColor = "#dc3545";
+    } else if (anoIntro < ano && fecha != "" && fecha.length == 10) {
+        document.getElementById("fechaval").style.display = "block";
+        document.getElementById("fechanoval").style.display = "none";
+        document.getElementById("fecha").style.borderColor = "#28a745";
+    }
+
+}
+
+function valCalle() {
+
+    var calleynum = document.getElementById("calleynum").value;
+
+    if (/^\s+$/.test(calleynum) || calleynum == null || calleynum.length < 2) {
+        document.getElementById("calleval").style.display = "none";
+        document.getElementById("callenoval").style.display = "block";
+        document.getElementById("calleynum").style.borderColor = "#dc3545";
+    } else if (calleynum != null && calleynum.length > 2) {
+        document.getElementById("calleval").style.display = "block";
+        document.getElementById("callenoval").style.display = "none";
+        document.getElementById("calleynum").style.borderColor = "#28a745";
+    }
+
+}
+
+function valColonia() {
+
+    var col = document.getElementById("col").value;
+
+    if (/^\s+$/.test(col) || col == null || col.length < 2) {
+        document.getElementById("colval").style.display = "none";
+        document.getElementById("colnoval").style.display = "block";
+        document.getElementById("col").style.borderColor = "#dc3545";
+    } else if (col != null && col.length > 2) {
+        document.getElementById("colval").style.display = "block";
+        document.getElementById("colnoval").style.display = "none";
+        document.getElementById("col").style.borderColor = "#28a745";
+    }
+
+}
+
+function valCodigo() {
+
+    var postal = document.getElementById("postal").value;
+
+    if (/^\s+$/.test(postal) || postal == null || postal.length < 5) {
+        document.getElementById("codval").style.display = "none";
+        document.getElementById("codnoval").style.display = "block";
+        document.getElementById("postal").style.borderColor = "#dc3545";
+    } else if (postal != null && postal.length == 5) {
+        document.getElementById("codval").style.display = "block";
+        document.getElementById("codnoval").style.display = "none";
+        document.getElementById("postal").style.borderColor = "#28a745";
+    }
+
+}
+
+function valTele() {
+
+    var tel = document.getElementById("tel").value;;
+
+    if (/^\s+$/.test(tel) || tel == null || tel.length < 10) {
+        document.getElementById("telval").style.display = "none";
+        document.getElementById("telnoval").style.display = "block";
+        document.getElementById("tel").style.borderColor = "#dc3545";
+    } else if (tel != null && tel.length == 10) {
+        document.getElementById("telval").style.display = "block";
+        document.getElementById("telnoval").style.display = "none";
+        document.getElementById("tel").style.borderColor = "#28a745";
+    }
 }
