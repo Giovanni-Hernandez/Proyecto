@@ -76,7 +76,7 @@
             <h1 id="Bienvenido"><i class="fas fa-user-graduate"></i> Información del alumno</h1>
             <p>A continuación se detallan los datos del estudiante</p>
             <div class="col text-center mt-4">
-                <a href="/../Proyecto WEB/eliminar.html" class="btn btn-success mr-3 mb-3" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
+                <a href="/../Proyecto WEB/php/buscar.php" class="btn btn-success mr-3 mb-3" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
                 <a href="/../Proyecto WEB/php/CerrarSesion.php" class="btn btn-danger mb-3" role="button">Cerrar Sesión <i class="fas fa-window-close"></i></a>
             </div>
         </div>
@@ -93,16 +93,16 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/../Proyecto WEB/eliminar.html">Eliminar un registro</a>
+                    <a class="nav-link" href="/../Proyecto WEB/php/eliminar.php">Eliminar un registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../Proyecto WEB/php/formulario.php">Crear un registro</a>
+                    <a class="nav-link" href="/../Proyecto WEB/php/crearSesionAlumno.php">Crear un registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../Proyecto WEB/actualizar.html">Actualizar registro</a>
+                    <a class="nav-link" href="/../Proyecto WEB/php/actualizar.php">Actualizar registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../Proyecto WEB/buscar.html">Buscar Alumno</a>
+                    <a class="nav-link" href="/../Proyecto WEB/php/buscar.php">Buscar Alumno</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/../Proyecto WEB/php/CerrarSesion.php">Cerrar Sesion</a>

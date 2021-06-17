@@ -212,7 +212,7 @@
                         <div class="row mt-2">
                             <div class="form-group col-lg-4 ">
                                 <label for="tel ">Tel&eacute;fono o celular<span class="text-danger ">*</span></label>
-                                <input type="text" class="form-control " id="tel" name="tel" size="10 " maxlength="12 " onkeypress="return soloNumeros(event)" autocomplete="off" value="<?php echo $datos['TelefonoOCelular']; ?>" required>
+                                <input type="text" class="form-control " id="tel" name="tel" size="10 " maxlength="10 " onkeypress="return soloNumeros(event)" autocomplete="off" value="<?php echo $datos['TelefonoOCelular']; ?>" required>
                                 <div class="valid-feedback ">¡Válido!</div>
                                 <div class="invalid-feedback ">Proporcione un teléfono válido</div>
                             </div>
