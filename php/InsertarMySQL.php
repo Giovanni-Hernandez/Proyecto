@@ -1,7 +1,8 @@
 <?php
    
    session_start();
-   include("Config.php");
+   include("GenerarPDF.php");
+   include("enviarCorreo.php");
    
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 
@@ -53,7 +54,7 @@
          //Metiedno el valor a la base de datos
 
          if(mysqli_query($db, $sql)){
-            header("location: /../Proyecto WEB/ImprimirPDF.html");
+               header("location: /../Proyecto WEB/index.html");
          }
          else{
             echo "Error " .$sql . "<br>" . mysqli_error($db);

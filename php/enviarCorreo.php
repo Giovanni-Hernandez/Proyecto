@@ -1,7 +1,5 @@
 <?php
 
-	include("Config.php");
-
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\SMTP;
 	use PHPMailer\PHPMailer\Exception;
@@ -54,13 +52,7 @@
 		/* Remitente */
 		$mail->addAddress($registro['correo']);
 
-		if ( $mail->send() ) {
-			echo "Correo enviando";
-		} else {
-			echo "Message could not be sent. Mailer Error: " . $mail->ErrorInfo;
-		}
-
-		$mail->smtpClose();
+		return mail -> send();
 	}
 
 	function recuperarDatos($boleta)
