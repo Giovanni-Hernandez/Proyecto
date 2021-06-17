@@ -1,46 +1,113 @@
 <!DOCTYPE html>
 <html lang ="es">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title> Mensaje HTML </title>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet"/>
+    
     <style>
+
+        .body-mensaje{
+            margin: 0;
+        }
+
         .encabezado{
             background-color: #0b6c9d;
             text-align: center;
-            padding: 2%;
-            margin: 0;
+            padding: 1em;
+
+            display: flex;
         }
-        .encabezado img{
-            width: 96px;
-            height: 73px;
+
+        .contenedorImagen{
+            width: 20%;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
         }
-        .encabezado p{
-            padding: 0.5%;
+
+        .contenedorTitulo{
+            width: 80%;
             color: white;
-            position: relative;
-            font-size: 150%;
-            font-family: 'Inconsolata', monospace;
         }
+
+        .titulo{
+            font-size: 110%;
+            font-weight: 300;
+        }
+
+        .bienvenido{
+            font-size: 100%;
+        }
+
+        .encabezado .contenedorImagen img{
+            width: 72px;
+            height: 55px;
+            margin-top: 1.25em;
+        }
+        
         .cuerpo{
             background-color: whitesmoke;
-            margin: 0;
-            padding: 2%;
-            text-align: center;
-            font-family: 'Inconsolata', monospace;
+            padding: 2em;
+            font-size: 90%;
         }
+
+        .cuerpo a{
+            color:#0b6c9d !important;
+            text-decoration: none;
+        }
+
+        .cuerpo a:hover{
+            background-color: #0b6c9d;
+            color: white !important;
+        }
+
+        .cuerpo p{
+            text-align: justify;
+        }
+
+        .pieMensaje{
+            padding: 1em;
+            text-align: center;
+            font-size: 80%;
+        }
+
     </style>
 </head>
-<body>
+<body class="body-mensaje">
     <div class = "encabezado">
-        <img src="https://i.imgur.com/Zg3Lp2z.png" alt="logo-escom-blanco"/>
-        <p>¡Bienvenido!</p>
+
+        <div class="contenedorImagen">
+            <img src="https://i.imgur.com/Zg3Lp2z.png" alt="logo-escom-blanco"/>
+        </div>
+
+        <div class="contenedorTitulo">
+            <p class="titulo">Escuela Superior de Cómputo</p>
+            <p class="bienvenido">¡Bienvenido!</p>
+        </div>
     </div>
     <div class = "cuerpo">
-        <p>Nos alegramos mucho de que pertenezas 
-            a esta casa de estudios. Hemos adjuntado tu comprobante de registro. En &eacute;l, podr&aacute;s encontrar tus datos
-            y el horario de tu examen. ¡Te esperamos en el horario indicado!
+        <p>
+            ¡Hola, <strong>%nombre%</strong> <strong>%ap%</strong> <strong>%am%</strong>! 
+            Nos alegra que seas parte de esta casa de estudios. Hemos adjuntado tu 
+            comprobante de registro en este correo electrónico. Si no lo recibiste, 
+            <strong><a href="http://localhost/Proyecto%20WEB/recuperar.html">da click aquí</a></strong> 
+            para solicitarlo.
         </p>
+        <br>
+        <p>
+            Fuiste asignado al grupo <strong>%grupo%</strong>, te esperamos el <strong>%dia%</strong> de 
+            <strong>%mes%</strong> del <strong>%anio%</strong> en el salón <strong>%salon% </strong> a 
+            las <strong>%hora%</strong> horas con tu comprobante de registro para que apliques tu examen de 
+            conocimientos previos. <strong>Es importante tu asistencia.</strong> Te recomendamos presentarte 
+            con 15 minutos de antelación.
+        </p>
+        <br>
+        <div class="pieMensaje">
+            <strong>© Todos los derechos reservados a la Escuela Superior de Cómputo</strong>
+        </div>
+
     </div>
 </body>
 </html>
