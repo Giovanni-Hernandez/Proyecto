@@ -33,7 +33,7 @@
         $datosAlumno = mysqli_fetch_array(($alumno));
 
         /* Recuperando los datos del grupo, horario y salon */
-        $queryGrupo = "SELECT Nombre, DAY(horario) as dia, MONTHNAME(horario) as mes, YEAR(horario) as anio, date_format(horario,'%H:%i') as hora, salon FROM grupo WHERE idGrupo = '{$datosAlumno['idGrupo']}'";
+        $queryGrupo = "SELECT Nombre, DAY(horario) as dia, MONTHNAME(horario) as mes, YEAR(horario) as anio, date_format(horario,'%h:%i %p') as hora, salon FROM grupo WHERE idGrupo = '{$datosAlumno['idGrupo']}'";
         $grupo = mysqli_query($db, $queryGrupo);
         $datosGrupo = mysqli_fetch_array(($grupo));
 

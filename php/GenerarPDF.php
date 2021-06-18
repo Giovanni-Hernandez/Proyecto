@@ -19,12 +19,15 @@
         $pdf->SetLineWidth(0);
         $pdf->SetFont('Arial','',11);
         $pdf->SetXY(20,55);
-        $pdf->MultiCell(165,5,utf8_decode("¡Bienvenido! A continuación podrás observar el horario, grupo y salón en el que te toca hacer tu examen. Al igual que tus Datos Generales."),0,'L',0);
+        $pdf->MultiCell(165,5,utf8_decode("¡Bienvenido! A continuación podrás observar el día, hora, grupo y salón en el que te toca hacer tu examen. Al igual que tus Datos Generales."),0,'L',0);
     
         $pdf->SetXY(20,68);
         $pdf->SetFont('Arial','B',11);
-        $pdf->Cell(20,10,"Horario:",0,0,'L');
-        $pdf->Cell(40,10, $datos['dia'].' de '.$datos['mes'].' del '.$datos['anio'].' a las '.$datos['hora'].' horas',0,1,'L');
+        $pdf->Cell(20,10, utf8_decode("Día:"),0,0,'L');
+        $pdf->Cell(60,10, $datos['dia'].' de '.$datos['mes'].' del '.$datos['anio'],0,0,'L');
+        $pdf->Cell(15,10, utf8_decode("Hora:"),0, 0,'L');
+        $pdf->Cell(10,10, $datos['hora'],0, 1,'L');
+
         $pdf->SetX(20);
         $pdf->Cell(20,10,"Grupo:",0,0,'L');
         $pdf->Cell(40,10, $datos['grupo'], 0, 1,'L');
