@@ -15,7 +15,7 @@ function soloLetras(e) {
         no = ".%";
 
 
-    if (letras.indexOf(tecla) == -1 && no.indexOf(tecla) != -1) {
+    if (letras.indexOf(tecla) == -1 || no.indexOf(tecla) != -1) {
         return false;
     }
 }
@@ -27,7 +27,18 @@ function letrasNumeros(e) {
         no = "%";
 
 
-    if (letras.indexOf(tecla) == -1 && no.indexOf(tecla) != -1) {
+    if (letras.indexOf(tecla) == -1 || no.indexOf(tecla) != -1) {
+        return false;
+    }
+}
+
+function sinArroba(e) {
+    var key = e.keyCode || e.which,
+        tecla = String.fromCharCode(key).toLowerCase(),
+        letras = "abcdefghijklmnopqrstuvwxyz0123456789.-_",
+        no = "%";
+
+    if (letras.indexOf(tecla) == -1 || no.indexOf(tecla) != -1) {
         return false;
     }
 }

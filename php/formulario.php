@@ -183,14 +183,14 @@
                         <legend class="font-weight-bold " id="contacto">Contacto</legend>
                         <div class="form-group mt-3 ">
                             <label for="calleynum ">Calle y N&uacute;mero<span class="text-danger ">*</span></label>
-                            <input <?php echo 'value = "'.$_SESSION['calleynum'].'"'; ?> type="text" class="form-control " id="calleynum" name="calleynum" size="10 " maxlength="25" required onkeypress="return letrasNumeros(event)" autocomplete="off" onchange="valCalle()">
+                            <input <?php echo 'value = "'.$_SESSION['calleynum'].'"'; ?> type="text" class="form-control " id="calleynum" name="calleynum" size="10 " maxlength="50" required onkeypress="return letrasNumeros(event)" autocomplete="off" onchange="valCalle()">
                             <div class="valid-feedback " id="calleval">¡Válido!</div>
                             <div class="invalid-feedback " id="callenoval">Por favor, registre su calle y número</div>
                         </div>
                         <div class="row mt-2 ">
                             <div class="form-group col-md-8 ">
                                 <label for="col ">Colonia<span class="text-danger ">*</span></label>
-                                <input <?php echo 'value = "'.$_SESSION['col'].'"'; ?> type="text" class="form-control " id="col" name="col" size="10 " maxlength="20 " required onkeypress="return soloLetras(event)" autocomplete="off" onchange="valColonia()">
+                                <input <?php echo 'value = "'.$_SESSION['col'].'"'; ?> type="text" class="form-control " id="col" name="col" size="10 " maxlength="50 " required onkeypress="return soloLetras(event)" autocomplete="off" onchange="valColonia()">
                                 <div class="valid-feedback " id="colval">¡Válido!</div>
                                 <div class="invalid-feedback " id="colnoval">Por favor, registre su colonia</div>
                             </div>
@@ -212,7 +212,7 @@
                             <div class="form-group col-lg-8 ">
                                 <label for="correo">Correo Electr&oacute;nico<span class="text-danger ">*</span></label>
                                 <div class="input-group ">
-                                    <input <?php echo 'value = "'.$_SESSION['correo'].'"'; ?> type="text " class="form-control " id="correo" name="correo" size="5" maxlength="20 " aria-describedby= "dircor" required autocomplete="off">
+                                    <input <?php echo 'value = "'.$_SESSION['correo'].'"'; ?> type="text " class="form-control " id="correo" name="correo" size="5" maxlength="30" aria-describedby= "dircor" required onkeypress="return sinArroba(event)" autocomplete="off" >
                                     <div class="input-group-append">  
                                         <select id="dircor"  name="dircor" class="form-control input-group-text">
                                             
@@ -237,7 +237,7 @@
                         <div class="row mt-3 ">
                             <div class="form-group col-lg-6 ">
                                 <label for="escuela ">Escuela de procedencia<span class="text-danger ">*</span></label>
-                                <select class="form-control " id="escuela" name="escuela" required onchange="mostrarCampo()">
+                                <select class="form-control " id="escuela" name="escuela" required onchange="mostrarCampo(); valEscuela();">
                                     <option <?php if($_SESSION['escuela'] == "Selecciona tu escuela de procedencia"){ echo 'selected';} ?> value = "Selecciona tu escuela de procedencia">Selecciona tu escuela de procedencia</option>
                                     <option <?php if($_SESSION['escuela'] == "CECyT 1 “Gonzalez Vazquez Vega“"){ echo 'selected';} ?> value = "CECyT 1 “Gonzalez Vazquez Vega“">CECyT 1 “Gonzalez Vazquez Vega"</option>
                                     <option <?php if($_SESSION['escuela'] == "CECyT 2 “Miguel Bernard“"){ echo 'selected';} ?> value = "CECyT 2 “Miguel Bernard“">CECyT 2 "Miguel Bernard"</option>
@@ -266,7 +266,7 @@
                             </div>
                             <div class="form-group col-lg-6">
                                 <label for="estado">Entidad federativa de procedencia<span class="text-danger">*</span></label>
-                                <select class="form-control" id="estado" name="estado" required onchange="validarSelects()"> 
+                                <select class="form-control" id="estado" name="estado" required onchange="valEstado()"> 
                                     <option <?php if($_SESSION['estado'] == "Selecciona tu estado de procedencia"){ echo 'selected';} ?> value = "Selecciona tu estado de procedencia"> Selecciona tu estado de procedencia</option>
                                     <option <?php if($_SESSION['estado'] == "Aguascalientes"){ echo 'selected';} ?> value = "Aguascalientes">Aguascalientes</option>
                                     <option <?php if($_SESSION['estado'] == "Baja California"){ echo 'selected';} ?> value = "Baja California">Baja California</option>

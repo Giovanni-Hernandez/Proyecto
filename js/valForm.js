@@ -228,12 +228,9 @@ function promedio() {
 
 }
 
-function validarSelects() {
+function valEscuela() {
 
     var escuela = document.getElementById("escuela").selectedIndex;
-    var estado = document.getElementById("estado").selectedIndex;
-    var opcionEsc = document.getElementById("opcionEscom").selectedIndex;
-
     if (escuela == null || escuela == 0) {
 
         document.getElementById("valEsc").style.display = "none";
@@ -248,6 +245,11 @@ function validarSelects() {
         document.getElementById("escuela").style.borderColor = "#28a745";
     }
 
+}
+
+function valEstado() {
+
+    var estado = document.getElementById("estado").selectedIndex;
     if (estado == null || estado == 0) {
 
         document.getElementById("valEsta").style.display = "none";
@@ -260,6 +262,12 @@ function validarSelects() {
         document.getElementById("valNoEsta").style.display = "none";
         document.getElementById("estado").style.borderColor = "#28a745";
     }
+}
+
+
+function validarSelects() {
+
+    var opcionEsc = document.getElementById("opcionEscom").selectedIndex;
 
     if (opcionEsc == null || opcionEsc == 0) {
 
