@@ -65,6 +65,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <!-- Icono de pagina -->
+    <link rel="icon" href="/../Proyecto WEB/img/icono.png">
+
     <title>Actualizar Registro</title>
 </head>
 <script type="text/javascript" src="/../Proyecto WEB/js/validacionForm.js"></script>

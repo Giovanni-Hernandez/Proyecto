@@ -44,6 +44,9 @@
     <script src="/../Proyecto WEB/js/validacionForm.js"></script>
     <script src="/../Proyecto WEB/js/valForm.js"></script>
 
+    <!-- Icono de pagina -->
+    <link rel="icon" href="/../Proyecto WEB/img/icono.png">
+
     <title>Eliminar Registro</title>
 </head>
 
