@@ -34,17 +34,22 @@
          $escProme = $_POST["escPromedio"];
          $opcionEsc1 = $_POST["opcionEscom"];
 
-         $boleta = strtoupper($boleta1);
-         $nombre = strtoupper($nombre1);
-         $apPat = strtoupper($apPat1);
-         $apMat = strtoupper($apMat1);
-         $CURP = strtoupper($CURP1);
-         $calleynum = strtoupper($calleynum1);
-         $colonia = strtoupper($colonia1);
-         $escuela = strtoupper($escuela1);
-         $estado = strtoupper($estado1);
-         $nomescuela = strtoupper($nomescuela1);
-         $opcionEsc = strtoupper($opcionEsc1);
+         $boleta = mb_strtoupper($boleta1, 'UTF-8');
+         $nombre = mb_strtoupper($nombre1, 'UTF-8');
+         $apPat = mb_strtoupper($apPat1, 'UTF-8');
+         $apMat = mb_strtoupper($apMat1, 'UTF-8');
+         $CURP = mb_strtoupper($CURP1, 'UTF-8');
+         $calleynum = mb_strtoupper($calleynum1, 'UTF-8');
+         $colonia = mb_strtoupper($colonia1, 'UTF-8');
+         $escuela = mb_strtoupper($escuela1, 'UTF-8');
+         $estado = mb_strtoupper($estado1, 'UTF-8');
+         $nomescuela = mb_strtoupper($nomescuela1, 'UTF-8');
+         $opcionEsc = mb_strtoupper($opcionEsc1, 'UTF-8');
+
+         if($escuela == 'OTRO')
+         {
+            $escuela = $nomescuela;
+         }
 
          //Comando de MySQL
          $sql = "UPDATE registroalumnos SET Nombre = '{$nombre}', ApellidoPaterno = '{$apPat}', ApellidoMaterno = '{$apMat}', FechaNacimiento = '{$fecha}', Genero = '{$genero}', CURP = '{$CURP}', CalleYNumero = '{$calleynum}', Colonia = '{$colonia}', CodigoPostal = '{$codigo}', TelefonoOCelular = '{$telefono}', Correo = '{$correo}', EscuelaProcedencia = '{$escuela}', EntidadFederativa = '{$estado}', NombreEscuela = '{$nomescuela}', Promedio = '{$escProme}', OpcionEscom = '{$opcionEsc}' WHERE NoBoleta = '{$boleta}' ";

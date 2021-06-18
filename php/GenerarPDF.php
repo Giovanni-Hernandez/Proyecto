@@ -57,15 +57,14 @@
             array('info' => 'Código Postal', 'campo' =>  $datos['codPostal']),
             array('info' => 'Teléfono o Celular', 'campo' =>  $datos['tel']),
             array('info' => 'Correo', 'campo' =>  $datos['correo']),
-            array('info' => 'Escuela Procedencia', 'campo' => $datos['escuela']),
+            array('info' => 'Escuela Procedencia', 'campo' => str_replace('“', '"', $datos['escuela'])),
             array('info' => 'Entidad Federativa', 'campo' =>  $datos['entidad']),
             array('info' => 'Promedio', 'campo' =>  $datos['prom']),
             array('info' => 'Opción ESCOM', 'campo' =>  $datos['opcion']),
-    
             );
-       
+
         $pdf -> tablaHorizontal($miCabecera, $misDatos);
-       
+
         if($filtro == 'S')
         {
             return $pdf -> Output('', 'S');
