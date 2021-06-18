@@ -63,8 +63,14 @@
                  </script>";
          }
          else if(mysqli_query($db, $sql)){
-            header("Location: /../Proyecto WEB/php/generarCorreo.php");
+            if(isset($_SESSION['login_user'])){
+               header("Location: /../Proyecto WEB/php/Administrador.php");
+            }
+            else{
+               header("Location: /../Proyecto WEB/php/generarCorreo.php");
+            }            
          }
+
          else{
             echo "<script>
                  alert('El registro no se pudo concretar');
