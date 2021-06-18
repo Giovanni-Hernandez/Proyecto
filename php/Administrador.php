@@ -60,7 +60,7 @@
                 <h1 id="Bienvenido">Bienvenido <?php echo $_SESSION['login_user']; ?></h1>
                 <p>Seleccione una operación CRUD</p>
                 <div class="col text-center mt-4">
-                    <a href="/../Proyecto WEB/login.html" class="btn btn-danger" role="button">Cerrar Sesión <i class="fas fa-window-close"></i></a>
+                    <a href="/../Proyecto WEB/php/CerrarSesion.php" class="btn btn-danger" role="button">Cerrar Sesión <i class="fas fa-window-close"></i></a>
                 </div>
             </div>
     </div>

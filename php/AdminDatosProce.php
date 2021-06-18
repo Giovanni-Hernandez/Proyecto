@@ -102,6 +102,7 @@
                 <div class="dropdown">
                 <button class="btn btn-outline-danger dropdown-toggle btn-block" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mostar Datos por</button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="nav-link" href="/../Proyecto WEB/php/eliminar.php">Eliminar un registro</a>
                     <a class="dropdown-item" href="/../Proyecto WEB/php/Administrador.php">Datos Personales</a>
                     <a class="dropdown-item" href="/../Proyecto WEB/php/AdminDatosCont.php">Contacto</a>
                     <a class="dropdown-item" href="/../Proyecto WEB/php/AdminDatosProce.php">Procedencia</a>
