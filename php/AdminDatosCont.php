@@ -132,7 +132,7 @@
                         <th class="align-middle">Apelido Materno</th>
                         <th class="align-middle">Calle Y Número</th>
                         <th class="align-middle">Colonia</th>
-                        <th class="align-middle">Códgio Postal</th>
+                        <th class="align-middle">Código Postal</th>
                         <th class="align-middle">Teléfono o Celular</th>
                         <th class="align-middle">Correo</th>
                     </tr>

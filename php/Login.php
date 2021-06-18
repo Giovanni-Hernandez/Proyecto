@@ -24,7 +24,6 @@
  
          $bandera = mysqli_num_rows($result);//Almacenamos el valor de busqueda
          
- 
          if($bandera == 1){
              $_SESSION['login_user'] = $user;
              header("location: /../Proyecto WEB/php/Administrador.php");

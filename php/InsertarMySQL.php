@@ -46,6 +46,11 @@
          $nomescuela = mb_strtoupper($nomescuela1, 'UTF-8');
          $opcionEsc = mb_strtoupper($opcionEsc1, 'UTF-8');
 
+         if($escuela == 'OTRO')
+         {
+            $escuela = $nomescuela;
+         }
+
          //Comando de MySQL
          $sql = "CALL inscribir ('{$boleta}', '{$nombre}', '{$apPat}', '{$apMat}', '{$fecha}', '{$genero}', '{$CURP}', '{$calleynum}', '{$colonia}', '{$codigo}', {$telefono}, '{$correo}', '{$escuela}', '{$estado}', '{$nomescuela}', '{$escProme}', '{$opcionEsc}')";
 

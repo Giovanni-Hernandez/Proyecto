@@ -6,7 +6,6 @@
     include("GenerarPDF.php");
     include("enviarCorreo.php");
 
-
     $doc = generarPdf($_SESSION['boleta'], 'S');
 
     if(enviarCorreo($doc, $_SESSION['boleta']))
