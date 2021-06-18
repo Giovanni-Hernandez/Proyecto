@@ -100,7 +100,7 @@
             <h1 id="Bienvenido"><i class="fas fa-pen-alt"></i> Actualizar información del alumno</h1>
             <p>Por favor, actualice los datos del estudiante</p>
             <div class="col text-center mt-4">
-                <a href="/../Proyecto WEB/php/Administrador.php" class="btn btn-success mr-3 mb-3" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
+                <a href="/../Proyecto WEB/php/actualizar.php" class="btn btn-success mr-3 mb-3" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
                 <a href="/../Proyecto WEB/php/CerrarSesion.php" class="btn btn-danger mb-3" role="button">Cerrar Sesión <i class="fas fa-window-close"></i></a>
             </div>
         </div>
@@ -136,7 +136,7 @@
                 <img src="/../Proyecto WEB/img/admin.png" class="img-fluid img-thumbnail rounded-circle mx-auto d-block zoom " alt="ESCOM ">
             </div>
             <!--Formulario-->
-            <form action="/../Proyecto WEB/php/ActualizarMySQL.php" method="POST" class="needs-validation" enctype="multipart/form-data" autocomplete="off " onclick="return validacion()" novalidate>
+            <form action="/../Proyecto WEB/php/ActualizarMySQL.php" method="POST" class="needs-validation" enctype="multipart/form-data" autocomplete="off" onclick="return validacion()" novalidate>
 
                 <fieldset>
                     <legend class="font-weight-bold " id="identidad">Identidad</legend>

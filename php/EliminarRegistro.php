@@ -77,7 +77,7 @@
                 <h1 id="Bienvenido"><i class="far fa-trash-alt"></i> Eliminar información del alumno</h1>
                 <p>Confirme si desea eliminar los datos del estudiante</p>
                 <div class="col text-center mt-4">
-                    <a href="/../Proyecto WEB/eliminar.html" class="btn btn-success mr-3 mb-3" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
+                    <a href="/../Proyecto WEB/php/eliminar.php" class="btn btn-success mr-3 mb-3" role="button"><i class="fas fa-arrow-circle-left"></i> Regresar</a>
                     <a href="/../Proyecto WEB/php/CerrarSesion.php" class="btn btn-danger mb-3" role="button">Cerrar Sesión <i class="fas fa-window-close"></i></a>
                 </div>
             </div>
