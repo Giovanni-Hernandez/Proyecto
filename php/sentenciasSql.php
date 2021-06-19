@@ -8,14 +8,41 @@
         $alumno = mysqli_query($db, $queryAlumno);
 
         /* Verificando la existencia */
-        if(mysqli_num_rows($alumno) == 1)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return mysqli_num_rows($alumno) == 1;
+    }
+
+    function existeCurp($curp)
+    {
+        /* Conexion a la base de datos */
+        $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+        $queryAlumno = "SELECT * FROM registroalumnos WHERE CURP = '{$curp}'";
+        $alumno = mysqli_query($db, $queryAlumno);
+
+        /* Verificando la existencia */
+        return mysqli_num_rows($alumno) == 1;
+    }
+
+    function existeCorreo($correo)
+    {
+        /* Conexion a la base de datos */
+        $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+        $queryAlumno = "SELECT * FROM registroalumnos WHERE Correo = '{$correo}'";
+        $alumno = mysqli_query($db, $queryAlumno);
+
+        /* Verificando la existencia */
+        return mysqli_num_rows($alumno) == 1;
+    }
+
+    function obtenerBoletaCurp($curp)
+    {
+        /* Conexion a la base de datos */
+        $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+        $queryAlumno = "SELECT NoBoleta FROM registroalumnos WHERE CURP = '{$curp}'";
+        $alumno = mysqli_query($db, $queryAlumno);
+        $datosAlumno = mysqli_fetch_array(($alumno));
+
+        /* Verificando la existencia */
+        return $datosAlumno['NoBoleta'];
     }
 
     function recuperarDatos($boleta)

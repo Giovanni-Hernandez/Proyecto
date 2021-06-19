@@ -4,14 +4,15 @@
     include("sentenciasSql.php");
     include("GenerarPDF.php");
 
-    if (existeAlumno($_POST['boleta']))
+    if (existeCurp($_POST['curp']))
     {
-        generarPdf($_POST['boleta'], 'D');
+        $boleta = obtenerBoletaCurp($_POST['curp']);
+        generarPdf($boleta, 'D');
     }
     else
     {
         echo "<script>
-                 alert('No existe un alumno con boleta {$_POST['boleta']}');
+                 alert('No existe un alumno con CURP: {$_POST['curp']}');
                  window.location= '/../Proyecto WEB/recuperar.html'
                  </script>";
     }

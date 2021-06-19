@@ -58,9 +58,21 @@
 
          if(existeAlumno($boleta)){
             echo "<script>
-                 alert('Ya existe un alumno con boleta {$boleta}');
+                 alert('Ya existe un alumno con boleta: {$boleta}');
                  window.location= '/../Proyecto WEB/index.html'
                  </script>";
+         }
+         else if(existeCorreo($correo)){
+            echo "<script>
+            alert('Ya existe un alumno con correo: {$correo}');
+            window.location= '/../Proyecto WEB/index.html'
+            </script>";
+         }
+         else if(existeCurp($CURP)){
+            echo "<script>
+            alert('Ya existe un alumno con CURP: {$CURP}');
+            window.location= '/../Proyecto WEB/index.html'
+            </script>";
          }
          else if(mysqli_query($db, $sql)){
             if(isset($_SESSION['login_user'])){
